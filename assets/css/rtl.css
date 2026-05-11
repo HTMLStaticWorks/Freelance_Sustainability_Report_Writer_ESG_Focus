@@ -1,0 +1,37 @@
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+[dir="rtl"] .navbar-nav {
+    padding-right: 0;
+}
+
+[dir="rtl"] .footer-link:hover {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+[dir="rtl"] #backToTop {
+    right: auto;
+    left: 30px;
+}
+
+[dir="rtl"] .offcanvas-start {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+}
+
+[dir="rtl"] .offcanvas-start.show {
+    transform: translateX(0);
+}

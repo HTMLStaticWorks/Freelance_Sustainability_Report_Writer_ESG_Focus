@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | EcoReport ESG</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <!-- CSS & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        #sidebar {
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: var(--secondary);
+            z-index: 1001;
+            transition: var(--transition-slow);
+        }
+        #sidebar.active {
+            left: -280px;
+        }
+        #mainContent {
+            margin-left: 280px;
+            min-height: 100vh;
+            transition: var(--transition-slow);
+        }
+        #mainContent.active {
+            margin-left: 0;
+        }
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            color: #9CA3AF;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+        .sidebar-link:hover, .sidebar-link.active {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--teal);
+        }
+        .dashboard-card {
+            border: none;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        @media (max-width: 992px) {
+            #sidebar { left: -280px; }
+            #sidebar.active { left: 0; }
+            #mainContent { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="shadow-lg border-end border-white border-opacity-10">
+        <div class="p-4 mb-4">
+            <a class="navbar-brand text-white d-flex align-items-center gap-2" href="index.html">
+                <div class="bg-primary rounded-pill p-2 d-flex align-items-center justify-content-center" style="width: 35px; height: 35px;">
+                    <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 10V22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 14L22 10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 14L10 10" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="fw-bold tracking-tight">EcoReport</span>
+            </a>
+        </div>
+        <div class="px-3">
+            <p class="small text-muted text-uppercase fw-bold mb-3 px-3 opacity-50" style="font-size: 10px; letter-spacing: 1px;">Analytics</p>
+            <a href="#" class="sidebar-link active rounded-3 mb-1"><i class="bi bi-grid-fill"></i> Overview</a>
+            <a href="#" class="sidebar-link rounded-3 mb-1"><i class="bi bi-file-earmark-bar-graph"></i> ESG Reports</a>
+            <a href="#" class="sidebar-link rounded-3 mb-1"><i class="bi bi-activity"></i> Carbon Pulse</a>
+            
+            <p class="small text-muted text-uppercase fw-bold mt-4 mb-3 px-3 opacity-50" style="font-size: 10px; letter-spacing: 1px;">Management</p>
+            <a href="#" class="sidebar-link rounded-3 mb-1"><i class="bi bi-shield-check"></i> Compliance</a>
+            <a href="#" class="sidebar-link rounded-3 mb-1"><i class="bi bi-people"></i> Stakeholders</a>
+            <a href="#" class="sidebar-link rounded-3 mb-1"><i class="bi bi-folder2-open"></i> Document Hub</a>
+
+            <div class="mt-auto pt-5">
+                <hr class="border-white opacity-10 mx-3">
+                <a href="#" class="sidebar-link rounded-3"><i class="bi bi-gear"></i> Settings</a>
+                <a href="index.html" class="sidebar-link text-danger-emphasis"><i class="bi bi-power"></i> Sign Out</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="mainContent" class="bg-light bg-opacity-50">
+        <!-- Dashboard Header -->
+        <header class="bg-white border-bottom sticky-top py-2 px-4 shadow-sm" style="backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.8) !important;">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <button id="sidebarToggle" class="btn btn-link text-secondary d-lg-none"><i class="bi bi-list fs-4"></i></button>
+                    <!-- Mobile Logo -->
+                    <a class="navbar-brand text-primary d-lg-none d-flex align-items-center gap-2" href="index.html">
+                        <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="d-none d-md-block">
+                        <h5 class="mb-0 fw-bold">Overview Dashboard</h5>
+                        <p class="small text-muted mb-0">Welcome back, Nexa Corp Intelligence</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                    <div class="input-group d-none d-xl-flex" style="width: 300px;">
+                        <span class="input-group-text bg-light border-0"><i class="bi bi-search small"></i></span>
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search data...">
+                    </div>
+                    
+                    <div class="d-flex align-items-center gap-3">
+                        <button id="themeToggle" class="btn btn-soft-secondary rounded-circle p-2"><i class="bi bi-moon-stars"></i></button>
+                        <div class="dropdown">
+                            <button class="btn btn-soft-secondary rounded-circle p-2 position-relative" data-bs-toggle="dropdown">
+                                <i class="bi bi-bell"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-3 p-0 overflow-hidden" style="width: 320px;">
+                                <li class="p-3 border-bottom d-flex justify-content-between align-items-center">
+                                    <span class="fw-bold">Notifications</span>
+                                    <span class="badge bg-primary rounded-pill">3 New</span>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-3 border-bottom d-flex gap-3" href="#">
+                                        <div class="bg-success bg-opacity-10 text-success rounded-circle p-2 h-100"><i class="bi bi-check-lg"></i></div>
+                                        <div>
+                                            <p class="mb-0 small fw-bold">Report Approved</p>
+                                            <p class="mb-0 extra-small text-muted">Annual 2025 has been verified.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="p-2 text-center"><a href="#" class="text-primary small fw-bold text-decoration-none">Mark all as read</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="vr opacity-10"></div>
+                    
+                    <div class="dropdown">
+                        <div class="d-flex align-items-center gap-3 cursor-pointer" data-bs-toggle="dropdown">
+                            <div class="text-end d-none d-md-block">
+                                <p class="small fw-bold mb-0">Nexa Corp</p>
+                                <span class="badge bg-soft-success text-success fw-normal" style="font-size: 9px;">Enterprise</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=64&q=80" class="rounded-circle border border-2 border-primary border-opacity-10" alt="Profile" width="40" height="40">
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2">
+                            <li><a class="dropdown-item py-2" href="#"><i class="bi bi-person me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item py-2" href="#"><i class="bi bi-gear me-2"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item py-2 text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-4">
+            <!-- Widgets -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="glass-card p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="bg-soft-primary rounded p-2 text-primary"><i class="bi bi-graph-up fs-4"></i></div>
+                            <span class="text-success small">+4.2%</span>
+                        </div>
+                        <h6 class="text-muted small fw-bold">ESG SCORE</h6>
+                        <h3>84.5 <span class="fs-6 text-muted fw-normal">/ 100</span></h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="glass-card p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="bg-soft-primary rounded p-2 text-primary"><i class="bi bi-cloud-arrow-down fs-4"></i></div>
+                            <span class="text-success small">-12%</span>
+                        </div>
+                        <h6 class="text-muted small fw-bold">EMISSIONS (TCO2E)</h6>
+                        <h3>2,450</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="glass-card p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="bg-soft-primary rounded p-2 text-primary"><i class="bi bi-shield-check fs-4"></i></div>
+                            <span class="text-primary small">98%</span>
+                        </div>
+                        <h6 class="text-muted small fw-bold">COMPLIANCE RATE</h6>
+                        <h3>GRI Aligned</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="glass-card p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="bg-soft-primary rounded p-2 text-primary"><i class="bi bi-file-earmark-check fs-4"></i></div>
+                        </div>
+                        <h6 class="text-muted small fw-bold">REPORTS READY</h6>
+                        <h3>12 <span class="fs-6 text-muted fw-normal">Active</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="row g-4 mb-4">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="mb-0">ESG Score Trend</h5>
+                            <select class="form-select form-select-sm w-auto">
+                                <option>Last 6 Months</option>
+                                <option>Last Year</option>
+                            </select>
+                        </div>
+                        <div style="height: 300px;">
+                            <canvas id="esgScoreChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="glass-card p-4 h-100">
+                        <h5 class="mb-4">Emission Breakdown</h5>
+                        <div style="height: 250px;">
+                            <canvas id="emissionsChart"></canvas>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Scope 1</span>
+                                <span class="fw-bold">450 t</span>
+                            </div>
+                            <div class="progress mb-3" style="height: 6px;">
+                                <div class="progress-bar bg-primary" style="width: 30%"></div>
+                            </div>
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Scope 2</span>
+                                <span class="fw-bold">320 t</span>
+                            </div>
+                            <div class="progress mb-3" style="height: 6px;">
+                                <div class="progress-bar bg-teal" style="width: 20%"></div>
+                            </div>
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>Scope 3</span>
+                                <span class="fw-bold">890 t</span>
+                            </div>
+                            <div class="progress" style="height: 6px;">
+                                <div class="progress-bar bg-accent" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="glass-card p-4 overflow-hidden">
+                <h5 class="mb-4">Active ESG Reports</h5>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="bg-theme-light">
+                            <tr>
+                                <th class="border-0 px-4 py-3">Report Name</th>
+                                <th class="border-0 py-3">Framework</th>
+                                <th class="border-0 py-3">Status</th>
+                                <th class="border-0 py-3">Last Updated</th>
+                                <th class="border-0 px-4 py-3 text-end">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 fw-bold">Annual Sustainability 2025</td>
+                                <td>GRI, SASB</td>
+                                <td><span class="badge bg-success bg-opacity-10 text-success px-3 py-2">Published</span></td>
+                                <td>Oct 12, 2025</td>
+                                <td class="px-4 text-end">
+                                    <button class="btn btn-soft-primary btn-sm rounded-pill px-3">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 fw-bold">Carbon Disclosure CDP</td>
+                                <td>CDP</td>
+                                <td><span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2">In Progress</span></td>
+                                <td>May 02, 2026</td>
+                                <td class="px-4 text-end">
+                                    <button class="btn btn-soft-primary btn-sm rounded-pill px-3">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 fw-bold">Stakeholder Engagement Summary</td>
+                                <td>UN SDG</td>
+                                <td><span class="badge bg-info bg-opacity-10 text-info px-3 py-2">Reviewing</span></td>
+                                <td>Apr 15, 2026</td>
+                                <td class="px-4 text-end">
+                                    <button class="btn btn-soft-primary btn-sm rounded-pill px-3">Review</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

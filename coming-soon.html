@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Soon | EcoReport ESG</title>
+    <!-- CSS & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body class="bg-secondary text-white">
+
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center py-5">
+        <div class="text-center w-100" style="max-width: 700px;">
+            <div class="mb-5">
+                <svg width="60" height="60" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h4 class="mt-3 text-white">EcoReport</h4>
+            </div>
+
+            <h1 class="display-3 fw-bold mb-4">Sustainability <span class="text-teal">Intelligence</span> for the Next Generation</h1>
+            <p class="lead text-muted mb-5">We are building a new standard for ESG reporting and carbon management. Join the waitlist for early access to our platform.</p>
+            
+            <!-- Countdown -->
+            <div class="row g-3 mb-5">
+                <div class="col-3">
+                    <div class="p-4 border border-secondary rounded-4 bg-dark bg-opacity-25">
+                        <h2 class="mb-0" id="days">24</h2>
+                        <span class="small text-muted">Days</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-4 border border-secondary rounded-4 bg-dark bg-opacity-25">
+                        <h2 class="mb-0" id="hours">12</h2>
+                        <span class="small text-muted">Hours</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-4 border border-secondary rounded-4 bg-dark bg-opacity-25">
+                        <h2 class="mb-0" id="minutes">45</h2>
+                        <span class="small text-muted">Mins</span>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-4 border border-secondary rounded-4 bg-dark bg-opacity-25">
+                        <h2 class="mb-0" id="seconds">08</h2>
+                        <span class="small text-muted">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="row g-2 justify-content-center mb-5">
+                <div class="col-md-8">
+                    <input type="email" class="form-control form-control-lg bg-dark border-secondary text-white rounded-3 py-3" placeholder="Enter your email address">
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary btn-lg w-100 py-3 rounded-3 fw-bold">Notify Me</button>
+                </div>
+            </form>
+
+            <div class="d-flex gap-4 justify-content-center mt-5">
+                <a href="#" class="text-white opacity-50 h4"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white opacity-50 h4"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-white opacity-50 h4"><i class="bi bi-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple countdown logic
+        function updateCountdown() {
+            const days = document.getElementById('days');
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            const seconds = document.getElementById('seconds');
+            
+            let d = parseInt(days.innerText);
+            let h = parseInt(hours.innerText);
+            let m = parseInt(minutes.innerText);
+            let s = parseInt(seconds.innerText);
+
+            if(s > 0) s--;
+            else {
+                s = 59;
+                if(m > 0) m--;
+                else {
+                    m = 59;
+                    if(h > 0) h--;
+                    else {
+                        h = 23;
+                        if(d > 0) d--;
+                    }
+                }
+            }
+            
+            days.innerText = d.toString().padStart(2, '0');
+            hours.innerText = h.toString().padStart(2, '0');
+            minutes.innerText = m.toString().padStart(2, '0');
+            seconds.innerText = s.toString().padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

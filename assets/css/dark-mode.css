@@ -1,0 +1,204 @@
+[data-theme="dark"] {
+    --bg-light: #0B0F19;
+    --bg-white: #111827;
+    --text-main: #E5E7EB;
+    --text-muted: #D1D5DB;
+    --border-color: #374151;
+    --glass-bg: rgba(30, 41, 59, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    /* Keep --secondary light for headings, footer bg handled separately */
+    --secondary: #F9FAFB;
+    --secondary-rgb: 249, 250, 251;
+}
+
+/* ── Restore dark footer background (overrides --secondary change) ── */
+[data-theme="dark"] footer {
+    background-color: #060D17 !important;
+}
+
+/* ── Fix bg-theme-secondary section (was turning white due to --secondary override) ── */
+[data-theme="dark"] .bg-theme-secondary {
+    background-color: #0D1117 !important;
+}
+
+/* ── Stat boxes inside dark sections: semi-transparent white tint ── */
+[data-theme="dark"] .bg-theme-secondary .bg-theme-white,
+[data-theme="dark"] .bg-theme-secondary [class*="bg-theme-white"] {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ── Glass-card form inside dark section: keep dark glass ── */
+[data-theme="dark"] .bg-theme-secondary .glass-card {
+    background: rgba(15, 23, 42, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ── Text inside dark sections should stay white ── */
+[data-theme="dark"] .bg-theme-secondary h2,
+[data-theme="dark"] .bg-theme-secondary h3,
+[data-theme="dark"] .bg-theme-secondary h4,
+[data-theme="dark"] .bg-theme-secondary h5,
+[data-theme="dark"] .bg-theme-secondary h6,
+[data-theme="dark"] .bg-theme-secondary p,
+[data-theme="dark"] .bg-theme-secondary .text-white {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-theme-secondary .opacity-75 {
+    opacity: 0.85 !important;
+}
+
+[data-theme="dark"] .bg-theme-secondary .opacity-50 {
+    opacity: 0.65 !important;
+}
+
+/* ── Footer text contrast in dark mode ── */
+[data-theme="dark"] footer p,
+[data-theme="dark"] footer p.text-muted {
+    color: #CBD5E1 !important; /* Slightly brighter than day mode for dark bg */
+}
+
+[data-theme="dark"] footer h5 {
+    color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .footer-link {
+    color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .footer-link:hover {
+    color: var(--teal) !important;
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+    color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .navbar.sticky-top {
+    background-color: var(--glass-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+}
+
+
+[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #0B0F19 0%, #111827 100%);
+}
+
+[data-theme="dark"] .text-muted {
+    color: #D1D5DB !important;
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--bg-white);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control {
+    background-color: #1F2937;
+    border-color: #374151;
+    color: white;
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: #1F2937;
+    color: white;
+}
+
+[data-theme="dark"] .badge.bg-soft-primary.text-primary {
+    background-color: rgba(var(--primary-rgb), 0.2) !important;
+    color: var(--teal) !important;
+}
+
+[data-theme="dark"] .navbar-brand {
+    color: var(--teal) !important;
+}
+
+[data-theme="dark"] .navbar-brand svg path {
+    stroke: var(--teal) !important;
+}
+
+[data-theme="dark"] .text-primary {
+    color: var(--teal) !important;
+}
+
+[data-theme="dark"] .bg-soft-primary {
+    background-color: rgba(20, 184, 166, 0.25) !important;
+}
+
+[data-theme="dark"] .btn-primary {
+    background-color: var(--teal);
+    border-color: var(--teal);
+}
+
+[data-theme="dark"] .text-dark {
+    color: var(--text-main) !important;
+}
+
+/* ── Glass card text in dark mode ── */
+[data-theme="dark"] .glass-card h4,
+[data-theme="dark"] .glass-card h5,
+[data-theme="dark"] .glass-card h6 {
+    color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .glass-card p,
+[data-theme="dark"] .glass-card li,
+[data-theme="dark"] .glass-card .text-muted {
+    color: #D1D5DB !important;
+}
+
+/* ── Section backgrounds in dark mode ── */
+[data-theme="dark"] .bg-theme-light {
+    background-color: #111827 !important;
+}
+
+[data-theme="dark"] .bg-theme-white {
+    background-color: #0B0F19 !important;
+}
+
+/* ── Card titles on dark bg-theme-light sections ── */
+[data-theme="dark"] .bg-theme-light h2,
+[data-theme="dark"] .bg-theme-light h4,
+[data-theme="dark"] .bg-theme-light h5,
+[data-theme="dark"] .bg-theme-light p {
+    color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .bg-theme-light .text-muted {
+    color: #D1D5DB !important;
+}
+
+/* ── p-4 / p-5 white-bg inner cards on dark sections ── */
+[data-theme="dark"] .bg-theme-white h4,
+[data-theme="dark"] .bg-theme-white h5,
+[data-theme="dark"] .bg-theme-white p {
+    color: #F9FAFB !important;
+}
+
+[data-theme="dark"] .bg-theme-white .text-muted {
+    color: #D1D5DB !important;
+}
+
+/* ── General section headings ── */
+[data-theme="dark"] section h2,
+[data-theme="dark"] section h4,
+[data-theme="dark"] section h5,
+[data-theme="dark"] section p:not(.text-white):not(.text-primary) {
+    color: #F9FAFB;
+}
+
