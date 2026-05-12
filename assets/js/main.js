@@ -78,14 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
         counters.forEach(counter => {
             const updateCount = () => {
                 const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
+                const suffix = counter.getAttribute('data-suffix') || '';
+                const count = +counter.innerText.replace(suffix, '');
                 const inc = target / speed;
 
                 if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
+                    counter.innerText = Math.ceil(count + inc) + suffix;
                     setTimeout(updateCount, 1);
                 } else {
-                    counter.innerText = target;
+                    counter.innerText = target + suffix;
                 }
             };
             updateCount();

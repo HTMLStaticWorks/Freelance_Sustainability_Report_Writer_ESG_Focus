@@ -148,12 +148,52 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-5px);
 }
 
-/* Hero Section */
 .hero-section {
     padding: 160px 0 100px;
-    background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+    background-color: #0f172a; /* Dark background matching mockup */
     position: relative;
     overflow: hidden;
+}
+
+.hero-section h1 {
+    background: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Optional slight drop shadow for the text fill to stand out more */
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5));
+}
+
+.hero-section .text-gradient {
+    background: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section .lead,
+.hero-section .fw-medium {
+    color: #e2e8f0 !important;
+}
+
+.hero-section h6.text-primary {
+    color: var(--teal) !important;
+}
+
+.hero-section .btn-primary {
+    background-color: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+}
+
+.hero-section .btn-outline-primary {
+    color: var(--teal);
+    border-color: var(--teal);
+    background-color: transparent;
+}
+
+.hero-section .btn-outline-primary:hover {
+    background-color: var(--teal);
+    color: #fff;
 }
 
 .hero-section::before {

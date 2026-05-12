@@ -17,7 +17,7 @@
 <body>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@
                         <i class="bi bi-moon-fill fs-5"></i>
                     </button>
                     <button id="rtlToggle" class="btn btn-outline-primary btn-sm px-2 py-0">RTL</button>
-                    <a href="login.html" class="nav-link fw-semibold">Login</a>
+                    <a href="login.html" class="btn btn-outline-primary fw-semibold ms-lg-2">Login</a>
                     <a href="booking.html" class="btn btn-primary">Book Consultation</a>
                 </div>
             </div>
@@ -130,37 +130,60 @@
     </header>
 
     <!-- Framework Intelligence Section -->
-    <section class="py-5 bg-theme-white border-top border-bottom overflow-hidden">
+    <section class="section-padding bg-theme-light border-top border-bottom overflow-hidden">
         <div class="container-fluid px-md-5">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-3">
-                    <p class="text-primary fw-bold text-uppercase small mb-2">Global Coverage</p>
-                    <h3 class="fw-bold mb-0">Multi-Framework Integration</h3>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-4 reveal-on-scroll">
+                    <p class="text-primary fw-bold text-uppercase small mb-3">Global Coverage</p>
+                    <h2 class="display-5 fw-bold mb-4">Multi-Framework Integration</h2>
+                    <p class="text-muted mb-5">Our platform seamlessly synchronizes your ESG data across the world's most rigorous disclosure standards, ensuring compliance without the complexity.</p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center gap-3 p-3 bg-theme-white rounded-3 shadow-sm border border-secondary border-opacity-10">
+                            <i class="bi bi-shield-check text-primary fs-4"></i>
+                            <span class="fw-medium small text-dark">Audit-Ready Data Extraction</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 p-3 bg-theme-white rounded-3 shadow-sm border border-secondary border-opacity-10">
+                            <i class="bi bi-arrow-repeat text-primary fs-4"></i>
+                            <span class="fw-medium small text-dark">Real-time Framework Mapping</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-9">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <div class="p-3 border border-secondary border-opacity-10 rounded-4 text-center h-100 bg-theme-light">
-                                <div class="text-primary mb-2 h4">GRI</div>
-                                <p class="extra-small text-muted mb-0">Universal Impact Standards</p>
+                <div class="col-lg-8 reveal-on-scroll">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="assets/images/gri-framework.png" alt="GRI" class="w-100 object-fit-cover" style="height:250px;">
+                                <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
+                                    <h5 class="fw-bold text-primary mb-1">GRI</h5>
+                                    <p class="extra-small text-muted mb-0">Universal Impact Standards</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-3">
-                            <div class="p-3 border border-secondary border-opacity-10 rounded-4 text-center h-100 bg-theme-light">
-                                <div class="text-primary mb-2 h4">SASB</div>
-                                <p class="extra-small text-muted mb-0">Financial Materiality</p>
+                        <div class="col-6 mt-md-5">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="assets/images/sasb-standards.png" alt="SASB" class="w-100 object-fit-cover" style="height:250px;">
+                                <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
+                                    <h5 class="fw-bold text-primary mb-1">SASB</h5>
+                                    <p class="extra-small text-muted mb-0">Financial Materiality</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-3">
-                            <div class="p-3 border border-secondary border-opacity-10 rounded-4 text-center h-100 bg-theme-light">
-                                <div class="text-primary mb-2 h4">TCFD</div>
-                                <p class="extra-small text-muted mb-0">Climate Risk Analytics</p>
+                        <div class="col-6">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="TCFD" class="w-100 object-fit-cover" style="height:250px;">
+                                <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
+                                    <h5 class="fw-bold text-primary mb-1">TCFD</h5>
+                                    <p class="extra-small text-muted mb-0">Climate Risk Analytics</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6 col-md-3">
-                            <div class="p-3 border border-secondary border-opacity-10 rounded-4 text-center h-100 bg-theme-light">
-                                <div class="text-primary mb-2 h4">CSRD</div>
-                                <p class="extra-small text-muted mb-0">EU Compliance Ready</p>
+                        <div class="col-6 mt-md-5">
+                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="CSRD" class="w-100 object-fit-cover" style="height:250px;">
+                                <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
+                                    <h5 class="fw-bold text-primary mb-1">CSRD</h5>
+                                    <p class="extra-small text-muted mb-0">EU Compliance Ready</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -349,7 +372,7 @@
     </section>
 
     <!-- Results Section -->
-    <section class="section-padding bg-theme-secondary text-white overflow-hidden">
+    <section class="section-padding bg-dark text-white overflow-hidden" style="background-color: #0B0F19 !important;">
         <div class="container-fluid px-md-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 reveal-on-scroll">
@@ -358,13 +381,13 @@
                     
                     <div class="row g-4 mb-5">
                         <div class="col-6">
-                            <div class="p-4 rounded-4 bg-theme-white bg-opacity-10 border border-white border-opacity-10">
+                            <div class="p-4 rounded-4 border border-white border-opacity-10" style="background-color: rgba(255,255,255,0.05);">
                                 <h3 class="fw-bold mb-0 text-white">30%</h3>
                                 <p class="small mb-0 text-white opacity-75">Avg. Carbon Reduction</p>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="p-4 rounded-4 bg-theme-white bg-opacity-10 border border-white border-opacity-10">
+                            <div class="p-4 rounded-4 border border-white border-opacity-10" style="background-color: rgba(255,255,255,0.05);">
                                 <h3 class="fw-bold mb-0 text-white">85%</h3>
                                 <p class="small mb-0 text-white opacity-75">Stakeholder Trust Increase</p>
                             </div>
@@ -377,14 +400,14 @@
                         <div class="d-flex align-items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Marcus" class="rounded-circle" width="50" height="50">
                             <div>
-                                <h6 class="mb-0 fw-bold">David Sterling</h6>
+                                <h6 class="mb-0 fw-bold text-white">David Sterling</h6>
                                 <span class="small opacity-75">Chief Sustainability Officer, Nexa Corp</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 reveal-on-scroll">
-                    <div class="glass-card p-5 bg-theme-white bg-opacity-10 border-white border-opacity-20">
+                    <div class="glass-card p-5 border-white border-opacity-20" style="background-color: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
                         <h4 class="text-white mb-4">Request Your ESG Maturity Audit</h4>
                         <p class="small text-white opacity-75 mb-4">Our experts will conduct a high-level review of your current reporting status and provide a strategic roadmap.</p>
                         <form>
