@@ -200,3 +200,22 @@
 [data-theme="dark"] section p:not(.text-white):not(.text-primary) {
     color: #F9FAFB;
 }
+
+[data-theme="dark"] .hero-section h1,
+[data-theme="dark"] .hero-section h1 .text-gradient {
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* Fix outline buttons visibility in dark mode */
+[data-theme="dark"] .btn-outline-primary {
+    background-color: var(--teal);
+    border-color: var(--teal);
+    color: #fff !important;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #0d9488;
+    border-color: #0d9488;
+}

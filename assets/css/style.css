@@ -167,6 +167,19 @@ h6 {
     border-color: var(--primary);
 }
 
+.btn-green {
+    background-color: #22c55e !important;
+    border-color: #22c55e !important;
+    color: white !important;
+}
+
+.btn-green:hover {
+    background-color: #16a34a !important;
+    border-color: #16a34a !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 /* Cards & Glassmorphism */
 .glass-card {
     background: var(--glass-bg);
