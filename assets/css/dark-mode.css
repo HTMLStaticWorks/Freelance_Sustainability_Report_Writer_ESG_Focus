@@ -55,7 +55,8 @@
 /* ── Footer text contrast in dark mode ── */
 [data-theme="dark"] footer p,
 [data-theme="dark"] footer p.text-muted {
-    color: #CBD5E1 !important; /* Slightly brighter than day mode for dark bg */
+    color: #CBD5E1 !important;
+    /* Slightly brighter than day mode for dark bg */
 }
 
 [data-theme="dark"] footer h5 {
@@ -75,11 +76,11 @@
     color: var(--text-main);
 }
 
-[data-theme="dark"] h1, 
-[data-theme="dark"] h2, 
-[data-theme="dark"] h3, 
-[data-theme="dark"] h4, 
-[data-theme="dark"] h5, 
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
 [data-theme="dark"] h6 {
     color: #F9FAFB !important;
 }
@@ -95,9 +96,7 @@
 }
 
 
-[data-theme="dark"] .hero-section {
-    background: linear-gradient(135deg, #0B0F19 0%, #111827 100%);
-}
+
 
 [data-theme="dark"] .text-muted {
     color: #D1D5DB !important;
@@ -201,4 +200,3 @@
 [data-theme="dark"] section p:not(.text-white):not(.text-primary) {
     color: #F9FAFB;
 }
-

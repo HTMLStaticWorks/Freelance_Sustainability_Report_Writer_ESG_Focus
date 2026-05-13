@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,84 @@
     <!-- CSS & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-theme-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-xl sticky-top bg-theme-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
                 <span>EcoReport</span>
             </a>
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
+                <span class="bi bi-list fs-1 text-primary"></span>
+            </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Back to Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button id="themeToggle" class="btn icon-btn text-secondary"><i
+                            class="bi bi-moon-fill"></i></button>
+                    <button id="rtlToggle" class="btn icon-btn text-secondary"><i
+                            class="bi bi-arrow-left-right"></i></button>
+                    <a href="register.html" class="btn btn-outline-primary fw-semibold">Sign Up</a>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
+                </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                <hr>
+                <li class="nav-item"><a href="booking.html" class="btn btn-primary w-100">Book Consultation</a></li>
+            </ul>
+        </div>
+    </div>
 
     <main style="padding-top: 150px; min-height: 100vh;" class="bg-theme-light">
         <section class="container pb-5">
@@ -43,9 +94,10 @@
                     <div class="glass-card overflow-hidden">
                         <div class="row g-0">
                             <!-- Left: Info -->
-                            <div class="col-md-4 bg-primary p-5 text-white">
+                            <div class="col-md-4 p-5 text-white" style="background-color: var(--teal);">
                                 <h3 class="text-white mb-4">ESG Strategy Session</h3>
-                                <p class="small opacity-75">Book a 30-minute discovery call to discuss your reporting needs, framework alignment, and carbon accounting strategies.</p>
+                                <p class="small opacity-75">Book a 30-minute discovery call to discuss your reporting
+                                    needs, framework alignment, and carbon accounting strategies.</p>
                                 <hr class="my-4 border-white opacity-25">
                                 <ul class="list-unstyled small gap-3 d-grid">
                                     <li><i class="bi bi-clock me-2"></i> 30 Minutes</li>
@@ -55,7 +107,8 @@
                                 <div class="mt-5 pt-5">
                                     <p class="small mb-1">Expert Presence:</p>
                                     <div class="d-flex align-items-center gap-2">
-                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80" class="rounded-circle" alt="Sarah">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&q=80"
+                                            class="rounded-circle" alt="Sarah">
                                         <span class="fw-bold">Sarah Jenkins</span>
                                     </div>
                                 </div>
@@ -71,23 +124,42 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label class="form-label small fw-bold">Company Email</label>
-                                            <input type="email" class="form-control" placeholder="john@company.com" required>
+                                            <input type="email" class="form-control" placeholder="john@company.com"
+                                                required>
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label small fw-bold">Select Date</label>
                                             <div class="row g-2 text-center">
-                                                <div class="col-3"><div class="p-2 border rounded-3 small cursor-pointer">May 15</div></div>
-                                                <div class="col-3"><div class="p-2 border rounded-3 small cursor-pointer active bg-soft-primary text-primary border-primary">May 16</div></div>
-                                                <div class="col-3"><div class="p-2 border rounded-3 small cursor-pointer">May 17</div></div>
-                                                <div class="col-3"><div class="p-2 border rounded-3 small cursor-pointer">May 18</div></div>
+                                                <div class="col-3">
+                                                    <div class="p-2 border rounded-3 small cursor-pointer">May 15</div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div
+                                                        class="p-2 border rounded-3 small cursor-pointer active bg-soft-primary text-primary border-primary">
+                                                        May 16</div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="p-2 border rounded-3 small cursor-pointer">May 17</div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="p-2 border rounded-3 small cursor-pointer">May 18</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <label class="form-label small fw-bold">Select Time Slot (EST)</label>
                                             <div class="row g-2 text-center">
-                                                <div class="col-4"><div class="p-2 border rounded-3 small">09:00 AM</div></div>
-                                                <div class="col-4"><div class="p-2 border rounded-3 small active bg-soft-primary text-primary border-primary">10:30 AM</div></div>
-                                                <div class="col-4"><div class="p-2 border rounded-3 small">01:00 PM</div></div>
+                                                <div class="col-4">
+                                                    <div class="p-2 border rounded-3 small">09:00 AM</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div
+                                                        class="p-2 border rounded-3 small active bg-soft-primary text-primary border-primary">
+                                                        10:30 AM</div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="p-2 border rounded-3 small">01:00 PM</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -100,7 +172,8 @@
                                             </select>
                                         </div>
                                         <div class="col-12 mt-4">
-                                            <button type="submit" class="btn btn-primary w-100 py-3">Confirm Booking</button>
+                                            <button type="submit" class="btn btn-primary w-100 py-3">Confirm
+                                                Booking</button>
                                         </div>
                                     </div>
                                 </form>
@@ -112,9 +185,70 @@
         </section>
     </main>
 
-    <footer class="bg-secondary text-white py-4">
-        <div class="container text-center">
-            <p class="small mb-0">&copy; 2026 EcoReport ESG. <a href="index.html" class="text-teal text-decoration-none">Back to Home</a></p>
+    <footer class="footer section-padding pb-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand mb-4 d-inline-flex" href="index.html">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="var(--teal)" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 10V22" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L22 10" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L10 10" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span class="ms-2 fs-4 fw-bold text-white">EcoReport</span>
+                    </a>
+                    <p class="text-muted mb-4">Strategic ESG reporting and sustainability consulting for global
+                        enterprises.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5>Quick Links</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>ESG Services</h5>
+                    <a href="#" class="footer-link">GRI Reporting</a>
+                    <a href="#" class="footer-link">SASB Alignment</a>
+                    <a href="#" class="footer-link">TCFD Support</a>
+                    <a href="#" class="footer-link">Net-Zero Strategy</a>
+                    <a href="#" class="footer-link">Impact Analysis</a>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5>Newsletter</h5>
+                    <p class="text-muted small">Stay updated on latest ESG regulations and reporting standards.</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark border-secondary text-white placeholder-white"
+                            placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 small text-muted">&copy; 2026 EcoReport ESG Services. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted small text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -123,11 +257,13 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content border-0 rounded-4">
                 <div class="modal-body p-5 text-center">
-                    <div class="bg-soft-primary text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
+                    <div class="bg-soft-primary text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                        style="width: 80px; height: 80px;">
                         <i class="bi bi-check2-circle display-4"></i>
                     </div>
                     <h4>Booking Confirmed!</h4>
-                    <p class="text-muted small">An invitation has been sent to your email. We look forward to discussing your ESG journey.</p>
+                    <p class="text-muted small">An invitation has been sent to your email. We look forward to discussing
+                        your ESG journey.</p>
                     <button class="btn btn-primary w-100 mt-3" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -137,11 +273,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const modal = new bootstrap.Modal(document.getElementById('successModal'));
             modal.show();
         });
     </script>
 </body>
+
 </html>

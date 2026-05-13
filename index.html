@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoReport | Premium ESG Sustainability Reporting & Consulting</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    <meta name="description" content="Expert ESG sustainability reporting, carbon emissions analysis, and GRI/SASB aligned disclosures for corporations and investors.">
-    
+    <meta name="description"
+        content="Expert ESG sustainability reporting, carbon emissions analysis, and GRI/SASB aligned disclosures for corporations and investors.">
+
     <!-- SEO & Social -->
     <meta property="og:title" content="EcoReport | Premium ESG Sustainability Reporting">
     <meta property="og:description" content="Expert ESG sustainability reporting and consulting.">
@@ -15,8 +17,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -24,22 +28,28 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-xl fixed-top">
+    <nav class="navbar navbar-expand-xl sticky-top bg-theme-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
                 <span>EcoReport</span>
             </a>
-            
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
                 <span class="bi bi-list fs-1 text-primary"></span>
             </button>
 
@@ -51,16 +61,14 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <button id="themeToggle" class="btn btn-link text-decoration-none p-0 text-secondary">
-                        <i class="bi bi-moon-fill fs-5"></i>
-                    </button>
-                    <button id="rtlToggle" class="btn btn-outline-primary btn-sm px-2 py-0">RTL</button>
-                    <a href="login.html" class="btn btn-outline-primary fw-semibold ms-lg-2">Login</a>
-                    <a href="booking.html" class="btn btn-primary">Book Consultation</a>
+                    <button id="themeToggle" class="btn icon-btn text-secondary"><i class="bi bi-moon-fill"></i></button>
+                    <button id="rtlToggle" class="btn icon-btn text-secondary"><i class="bi bi-arrow-left-right"></i></button>
+                    <a href="register.html" class="btn btn-outline-primary fw-semibold">Sign Up</a>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
                 </div>
             </div>
         </div>
@@ -81,46 +89,57 @@
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 <hr>
-                <li class="nav-item"><a href="booking.html" class="btn btn-primary w-100">Book Consultation</a></li>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <span class="fw-bold">Theme</span>
+                        <button id="themeToggleMobile" class="btn icon-btn text-secondary"><i class="bi bi-moon-fill"></i></button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <span class="fw-bold">Layout</span>
+                        <button id="rtlToggleMobile" class="btn icon-btn text-secondary"><i class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <a href="register.html" class="btn btn-outline-primary w-100">Sign Up</a>
+                    <a href="booking.html" class="btn btn-primary w-100">Book Now</a>
+                </div>
             </ul>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <header class="hero-section pb-0">
+    <header class="hero-section has-bg-image"
+        style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');">
         <div class="container">
             <div class="row justify-content-center g-5 text-center">
                 <div class="col-lg-10 reveal-on-scroll">
                     <div class="d-flex align-items-center justify-content-center gap-3 mb-3">
-                        <div style="width: 40px; height: 2px; background-color: var(--bs-primary);"></div>
+                        <div style="width: 40px; height: 2px; background-color: var(--teal);"></div>
                         <h6 class="text-primary fw-bold text-uppercase mb-0">Enterprise ESG Intelligence</h6>
-                        <div style="width: 40px; height: 2px; background-color: var(--bs-primary);"></div>
+                        <div style="width: 40px; height: 2px; background-color: var(--teal);"></div>
                     </div>
-                    <h1 class="display-4 mb-4">Transform ESG Data Into <span class="text-gradient">Investor-Ready</span> Reports</h1>
-                    <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px;">Independent sustainability specialist helping corporations navigate GRI, SASB, and TCFD frameworks with precision and impact.</p>
+                    <h1 class="display-4 mb-4" style="background: none; -webkit-text-fill-color: white; color: white;">
+                        Transform ESG Data Into <span class="text-teal">Investor-Ready</span> Reports</h1>
+                    <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px; color: #e2e8f0 !important;">
+                        Independent sustainability specialist helping corporations navigate GRI, SASB, and TCFD
+                        frameworks with precision and impact.</p>
                     <div class="d-flex flex-wrap justify-content-center gap-3">
                         <a href="services.html" class="btn btn-primary btn-lg">Explore Services</a>
                         <a href="case-studies.html" class="btn btn-outline-primary btn-lg">View Case Studies</a>
                     </div>
                     <div class="mt-5 d-flex align-items-center justify-content-center gap-4 flex-wrap">
                         <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-check-circle-fill text-primary"></i>
-                            <span class="fw-medium">GRI Aligned</span>
+                            <i class="bi bi-check-circle-fill text-teal"></i>
+                            <span class="fw-medium" style="color: #e2e8f0 !important;">GRI Aligned</span>
                         </div>
                         <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-check-circle-fill text-primary"></i>
-                            <span class="fw-medium">SASB Expert</span>
+                            <i class="bi bi-check-circle-fill text-teal"></i>
+                            <span class="fw-medium" style="color: #e2e8f0 !important;">SASB Expert</span>
                         </div>
                         <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-check-circle-fill text-primary"></i>
-                            <span class="fw-medium">TCFD Ready</span>
+                            <i class="bi bi-check-circle-fill text-teal"></i>
+                            <span class="fw-medium" style="color: #e2e8f0 !important;">TCFD Ready</span>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="reveal-on-scroll" style="margin-bottom: -60px; position: relative; z-index: 10;">
-                        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="ESG Analytics" class="img-fluid rounded-4 shadow-lg border border-white border-opacity-25 w-100" style="max-height: 500px; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -164,36 +183,49 @@
             <div class="row g-4">
                 <div class="col-md-4 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Sustainability Reporting" class="w-100 object-fit-cover hover-zoom" style="height:220px;">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+                            alt="Sustainability Reporting" class="w-100 object-fit-cover hover-zoom"
+                            style="height:220px;">
                         <div class="p-4 p-lg-5 d-flex flex-column flex-grow-1">
                             <h4 class="fw-bold mb-3">Sustainability Reporting</h4>
-                            <p class="text-muted mb-4">Full-cycle reporting from data collection to final investor-ready disclosure documents.</p>
+                            <p class="text-muted mb-4">Full-cycle reporting from data collection to final investor-ready
+                                disclosure documents.</p>
                             <div class="mt-auto">
-                                <a href="service-details.html" class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2">Learn More <i class="bi bi-arrow-right"></i></a>
+                                <a href="service-details.html"
+                                    class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2">Learn
+                                    More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" alt="Carbon Accounting" class="w-100 object-fit-cover hover-zoom" style="height:220px;">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80"
+                            alt="Carbon Accounting" class="w-100 object-fit-cover hover-zoom" style="height:220px;">
                         <div class="p-4 p-lg-5 d-flex flex-column flex-grow-1">
                             <h4 class="fw-bold mb-3">Carbon Accounting</h4>
-                            <p class="text-muted mb-4">Scope 1, 2, and 3 emissions tracking and reporting aligned with GHG Protocol standards.</p>
+                            <p class="text-muted mb-4">Scope 1, 2, and 3 emissions tracking and reporting aligned with
+                                GHG Protocol standards.</p>
                             <div class="mt-auto">
-                                <a href="service-details.html" class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2">Learn More <i class="bi bi-arrow-right"></i></a>
+                                <a href="service-details.html"
+                                    class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2">Learn
+                                    More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="ESG Strategy" class="w-100 object-fit-cover hover-zoom" style="height:220px;">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                            alt="ESG Strategy" class="w-100 object-fit-cover hover-zoom" style="height:220px;">
                         <div class="p-4 p-lg-5 d-flex flex-column flex-grow-1">
                             <h4 class="fw-bold mb-3">ESG Strategy</h4>
-                            <p class="text-muted mb-4">Comprehensive ESG maturity assessments and strategic roadmapping for C-suite leaders.</p>
+                            <p class="text-muted mb-4">Comprehensive ESG maturity assessments and strategic roadmapping
+                                for C-suite leaders.</p>
                             <div class="mt-auto">
-                                <a href="service-details.html" class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2">Learn More <i class="bi bi-arrow-right"></i></a>
+                                <a href="service-details.html"
+                                    class="text-primary fw-bold text-decoration-none d-inline-flex align-items-center gap-2">Learn
+                                    More <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -207,16 +239,25 @@
         <div class="container-fluid px-md-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 reveal-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Team collaborating" class="img-fluid rounded-4 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                        alt="Team collaborating" class="img-fluid rounded-4 shadow-sm">
                 </div>
                 <div class="col-lg-6 reveal-on-scroll">
                     <h6 class="text-primary fw-bold text-uppercase mb-3">Our Approach</h6>
                     <h2 class="display-6 mb-4">Bridging the Gap Between Data and Impact</h2>
-                    <p class="text-muted mb-4">We believe that ESG reporting shouldn't just be an exercise in compliance—it should be a strategic advantage. Our expert consultants leverage deep industry knowledge to transform complex metrics into compelling narratives.</p>
+                    <p class="text-muted mb-4">We believe that ESG reporting shouldn't just be an exercise in
+                        compliance—it should be a strategic advantage. Our expert consultants leverage deep industry
+                        knowledge to transform complex metrics into compelling narratives.</p>
                     <ul class="list-unstyled mb-4">
-                        <li class="mb-3 d-flex align-items-center gap-3"><i class="bi bi-check2-circle text-primary fs-5"></i> <span class="fw-medium text-dark">Tailored strategies for your sector</span></li>
-                        <li class="mb-3 d-flex align-items-center gap-3"><i class="bi bi-check2-circle text-primary fs-5"></i> <span class="fw-medium text-dark">Audit-ready data preparation</span></li>
-                        <li class="mb-3 d-flex align-items-center gap-3"><i class="bi bi-check2-circle text-primary fs-5"></i> <span class="fw-medium text-dark">Seamless stakeholder communication</span></li>
+                        <li class="mb-3 d-flex align-items-center gap-3"><i
+                                class="bi bi-check2-circle text-primary fs-5"></i> <span
+                                class="fw-medium text-dark">Tailored strategies for your sector</span></li>
+                        <li class="mb-3 d-flex align-items-center gap-3"><i
+                                class="bi bi-check2-circle text-primary fs-5"></i> <span
+                                class="fw-medium text-dark">Audit-ready data preparation</span></li>
+                        <li class="mb-3 d-flex align-items-center gap-3"><i
+                                class="bi bi-check2-circle text-primary fs-5"></i> <span
+                                class="fw-medium text-dark">Seamless stakeholder communication</span></li>
                     </ul>
                     <a href="about.html" class="btn btn-outline-primary mt-2">Read Our Story</a>
                 </div>
@@ -231,36 +272,45 @@
                 <div class="col-lg-8 mx-auto">
                     <h6 class="text-primary fw-bold text-uppercase mb-3">How It Works</h6>
                     <h2 class="h1 mb-3">Our 4-Step ESG Journey</h2>
-                    <p class="text-muted">A streamlined, transparent process designed to take your company from baseline assessment to industry-leading disclosures.</p>
+                    <p class="text-muted">A streamlined, transparent process designed to take your company from baseline
+                        assessment to industry-leading disclosures.</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-md-3 reveal-on-scroll">
                     <div class="p-4 bg-theme-white rounded-4 shadow-sm h-100 text-center position-relative">
-                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">1</div>
+                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 60px; height: 60px; font-size: 1.5rem;">1</div>
                         <h5 class="fw-bold">Baseline Audit</h5>
-                        <p class="text-muted small mb-0">We evaluate your current data collection, existing policies, and identify critical reporting gaps.</p>
+                        <p class="text-muted small mb-0">We evaluate your current data collection, existing policies,
+                            and identify critical reporting gaps.</p>
                     </div>
                 </div>
                 <div class="col-md-3 reveal-on-scroll" style="transition-delay: 0.1s;">
                     <div class="p-4 bg-theme-white rounded-4 shadow-sm h-100 text-center position-relative">
-                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">2</div>
+                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 60px; height: 60px; font-size: 1.5rem;">2</div>
                         <h5 class="fw-bold">Strategy & Goals</h5>
-                        <p class="text-muted small mb-0">Collaboratively define material topics, set science-based targets, and map a clear strategic path.</p>
+                        <p class="text-muted small mb-0">Collaboratively define material topics, set science-based
+                            targets, and map a clear strategic path.</p>
                     </div>
                 </div>
                 <div class="col-md-3 reveal-on-scroll" style="transition-delay: 0.2s;">
                     <div class="p-4 bg-theme-white rounded-4 shadow-sm h-100 text-center position-relative">
-                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">3</div>
+                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 60px; height: 60px; font-size: 1.5rem;">3</div>
                         <h5 class="fw-bold">Data Integration</h5>
-                        <p class="text-muted small mb-0">Gather, verify, and consolidate ESG metrics across your entire value chain into a unified system.</p>
+                        <p class="text-muted small mb-0">Gather, verify, and consolidate ESG metrics across your entire
+                            value chain into a unified system.</p>
                     </div>
                 </div>
                 <div class="col-md-3 reveal-on-scroll" style="transition-delay: 0.3s;">
                     <div class="p-4 bg-theme-white rounded-4 shadow-sm h-100 text-center position-relative">
-                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 60px; height: 60px; font-size: 1.5rem;">4</div>
+                        <div class="bg-primary bg-opacity-10 text-primary fw-bold rounded-circle d-inline-flex align-items-center justify-content-center mb-4"
+                            style="width: 60px; height: 60px; font-size: 1.5rem;">4</div>
                         <h5 class="fw-bold">Final Disclosure</h5>
-                        <p class="text-muted small mb-0">Publish an investor-ready, compliant report aligned with GRI, SASB, and TCFD standards.</p>
+                        <p class="text-muted small mb-0">Publish an investor-ready, compliant report aligned with GRI,
+                            SASB, and TCFD standards.</p>
                     </div>
                 </div>
             </div>
@@ -274,23 +324,28 @@
                 <div class="col-lg-8 mx-auto">
                     <h6 class="text-primary fw-bold text-uppercase mb-3">Global Standards</h6>
                     <h2 class="h1 mb-3">Framework Intelligence</h2>
-                    <p class="text-muted">Direct expertise in the frameworks that matter most to global investors and regulators.</p>
+                    <p class="text-muted">Direct expertise in the frameworks that matter most to global investors and
+                        regulators.</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-6 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg">
                         <div class="position-relative">
-                            <img src="assets/images/gri-framework.png" alt="GRI Standards" class="w-100 object-fit-cover hover-zoom" style="height:300px;">
+                            <img src="assets/images/gri-framework.png" alt="GRI Standards"
+                                class="w-100 object-fit-cover hover-zoom" style="height:300px;">
                             <div class="position-absolute top-0 end-0 m-4">
                                 <span class="badge bg-primary px-3 py-2 rounded-pill">Global Standard</span>
                             </div>
                         </div>
                         <div class="p-5 flex-grow-1 d-flex flex-column">
                             <h3 class="fw-bold text-dark mb-3">GRI Reporting</h3>
-                            <p class="text-muted mb-4">The world's most widely used standards for sustainability reporting, focusing on multi-stakeholder impact and transparency.</p>
+                            <p class="text-muted mb-4">The world's most widely used standards for sustainability
+                                reporting, focusing on multi-stakeholder impact and transparency.</p>
                             <div class="mt-auto">
-                                <a href="service-details.html" class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore GRI Framework <i class="bi bi-arrow-right"></i></a>
+                                <a href="service-details.html"
+                                    class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore GRI
+                                    Framework <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -298,16 +353,20 @@
                 <div class="col-lg-6 reveal-on-scroll" style="transition-delay: 0.1s;">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg">
                         <div class="position-relative">
-                            <img src="assets/images/sasb-standards.png" alt="SASB Standards" class="w-100 object-fit-cover hover-zoom" style="height:300px;">
+                            <img src="assets/images/sasb-standards.png" alt="SASB Standards"
+                                class="w-100 object-fit-cover hover-zoom" style="height:300px;">
                             <div class="position-absolute top-0 end-0 m-4">
                                 <span class="badge bg-teal px-3 py-2 rounded-pill">Financial Materiality</span>
                             </div>
                         </div>
                         <div class="p-5 flex-grow-1 d-flex flex-column">
                             <h3 class="fw-bold text-dark mb-3">SASB Alignment</h3>
-                            <p class="text-muted mb-4">Industry-specific standards that identify the subset of sustainability issues most relevant to financial performance.</p>
+                            <p class="text-muted mb-4">Industry-specific standards that identify the subset of
+                                sustainability issues most relevant to financial performance.</p>
                             <div class="mt-auto">
-                                <a href="service-details.html" class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore SASB Standards <i class="bi bi-arrow-right"></i></a>
+                                <a href="service-details.html"
+                                    class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore SASB
+                                    Standards <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -315,16 +374,20 @@
                 <div class="col-lg-6 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg">
                         <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" alt="TCFD Disclosure" class="w-100 object-fit-cover hover-zoom" style="height:300px;">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
+                                alt="TCFD Disclosure" class="w-100 object-fit-cover hover-zoom" style="height:300px;">
                             <div class="position-absolute top-0 end-0 m-4">
                                 <span class="badge bg-primary px-3 py-2 rounded-pill">Climate Risk</span>
                             </div>
                         </div>
                         <div class="p-5 flex-grow-1 d-flex flex-column">
                             <h3 class="fw-bold text-dark mb-3">TCFD Disclosure</h3>
-                            <p class="text-muted mb-4">Helping companies disclose climate-related financial risks and opportunities through governance and strategy.</p>
+                            <p class="text-muted mb-4">Helping companies disclose climate-related financial risks and
+                                opportunities through governance and strategy.</p>
                             <div class="mt-auto">
-                                <a href="service-details.html" class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore TCFD Guidance <i class="bi bi-arrow-right"></i></a>
+                                <a href="service-details.html"
+                                    class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore TCFD
+                                    Guidance <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -332,16 +395,20 @@
                 <div class="col-lg-6 reveal-on-scroll" style="transition-delay: 0.1s;">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg">
                         <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="CSRD Compliance" class="w-100 object-fit-cover hover-zoom" style="height:300px;">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+                                alt="CSRD Compliance" class="w-100 object-fit-cover hover-zoom" style="height:300px;">
                             <div class="position-absolute top-0 end-0 m-4">
                                 <span class="badge bg-teal px-3 py-2 rounded-pill">EU Regulations</span>
                             </div>
                         </div>
                         <div class="p-5 flex-grow-1 d-flex flex-column">
                             <h3 class="fw-bold text-dark mb-3">CSRD Readiness</h3>
-                            <p class="text-muted mb-4">Navigating the new EU Corporate Sustainability Reporting Directive with precision and audit-ready data.</p>
+                            <p class="text-muted mb-4">Navigating the new EU Corporate Sustainability Reporting
+                                Directive with precision and audit-ready data.</p>
                             <div class="mt-auto">
-                                <a href="service-details.html" class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore CSRD Solutions <i class="bi bi-arrow-right"></i></a>
+                                <a href="service-details.html"
+                                    class="btn btn-link text-primary fw-bold p-0 text-decoration-none">Explore CSRD
+                                    Solutions <i class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -361,11 +428,17 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-6 reveal-on-scroll">
-                    <div class="p-5 border border-secondary border-opacity-10 rounded-4 bg-theme-light shadow-sm position-relative h-100 d-flex flex-column">
-                        <i class="bi bi-quote fs-1 text-primary position-absolute top-0 start-0 ms-4 mt-3 opacity-25"></i>
-                        <p class="fs-5 fst-italic mb-4 text-dark position-relative z-1">"EcoReport transformed our disjointed environmental metrics into a cohesive, investor-ready GRI report. Their expertise saved us hundreds of hours and improved our ESG rating significantly."</p>
+                    <div
+                        class="p-5 border border-secondary border-opacity-10 rounded-4 bg-theme-light shadow-sm position-relative h-100 d-flex flex-column">
+                        <i
+                            class="bi bi-quote fs-1 text-primary position-absolute top-0 start-0 ms-4 mt-3 opacity-25"></i>
+                        <p class="fs-5 fst-italic mb-4 text-dark position-relative z-1">"EcoReport transformed our
+                            disjointed environmental metrics into a cohesive, investor-ready GRI report. Their expertise
+                            saved us hundreds of hours and improved our ESG rating significantly."</p>
                         <div class="d-flex align-items-center gap-3 mt-auto">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah Jenkins" class="rounded-circle object-fit-cover shadow-sm" width="60" height="60">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                                alt="Sarah Jenkins" class="rounded-circle object-fit-cover shadow-sm" width="60"
+                                height="60">
                             <div>
                                 <h6 class="mb-0 fw-bold text-dark">Sarah Jenkins</h6>
                                 <span class="small text-muted">CSO, Global Logistics</span>
@@ -374,11 +447,17 @@
                     </div>
                 </div>
                 <div class="col-md-6 reveal-on-scroll">
-                    <div class="p-5 border border-secondary border-opacity-10 rounded-4 bg-theme-light shadow-sm position-relative h-100 d-flex flex-column">
-                        <i class="bi bi-quote fs-1 text-primary position-absolute top-0 start-0 ms-4 mt-3 opacity-25"></i>
-                        <p class="fs-5 fst-italic mb-4 text-dark position-relative z-1">"Navigating the new CSRD regulations seemed impossible until we partnered with this team. They laid out a clear roadmap and executed it flawlessly. A vital asset to our board."</p>
+                    <div
+                        class="p-5 border border-secondary border-opacity-10 rounded-4 bg-theme-light shadow-sm position-relative h-100 d-flex flex-column">
+                        <i
+                            class="bi bi-quote fs-1 text-primary position-absolute top-0 start-0 ms-4 mt-3 opacity-25"></i>
+                        <p class="fs-5 fst-italic mb-4 text-dark position-relative z-1">"Navigating the new CSRD
+                            regulations seemed impossible until we partnered with this team. They laid out a clear
+                            roadmap and executed it flawlessly. A vital asset to our board."</p>
                         <div class="d-flex align-items-center gap-3 mt-auto">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Marcus Thorne" class="rounded-circle object-fit-cover shadow-sm" width="60" height="60">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                                alt="Marcus Thorne" class="rounded-circle object-fit-cover shadow-sm" width="60"
+                                height="60">
                             <div>
                                 <h6 class="mb-0 fw-bold text-dark">Marcus Thorne</h6>
                                 <span class="small text-muted">Director of Finance, TechNova</span>
@@ -399,23 +478,30 @@
                     <h2 class="h1 mb-0">Latest ESG Insights</h2>
                 </div>
                 <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                    <a href="blog.html" class="btn btn-outline-primary">View All Articles <i class="bi bi-arrow-right ms-2"></i></a>
+                    <a href="blog.html" class="btn btn-outline-primary">View All Articles <i
+                            class="bi bi-arrow-right ms-2"></i></a>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-md-4 reveal-on-scroll">
-                    <div class="card border border-secondary border-opacity-10 shadow-sm h-100 rounded-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consulting" class="card-img-top object-fit-cover" style="height: 240px;">
+                    <div
+                        class="card border border-secondary border-opacity-10 shadow-sm h-100 rounded-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Consulting" class="card-img-top object-fit-cover" style="height: 240px;">
                         <div class="card-body p-4 d-flex flex-column">
                             <span class="badge bg-primary bg-opacity-10 text-primary mb-3 w-fit">Regulatory</span>
-                            <h5 class="card-title fw-bold mb-3"><a href="blog-details.html" class="text-dark text-decoration-none">Understanding the European CSRD Requirements for 2026</a></h5>
-                            <p class="card-text text-muted small mb-0">A comprehensive breakdown of the new Corporate Sustainability Reporting Directive and how it affects global supply chains.</p>
+                            <h5 class="card-title fw-bold mb-3"><a href="blog-details.html"
+                                    class="text-dark text-decoration-none">Understanding the European CSRD Requirements
+                                    for 2026</a></h5>
+                            <p class="card-text text-muted small mb-0">A comprehensive breakdown of the new Corporate
+                                Sustainability Reporting Directive and how it affects global supply chains.</p>
                         </div>
                         <div class="card-footer bg-theme-white border-0 p-4 pt-0 mt-auto">
                             <hr class="opacity-10 mb-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Sarah Jenkins" class="rounded-circle" width="32" height="32">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80"
+                                        alt="Sarah Jenkins" class="rounded-circle" width="32" height="32">
                                     <span class="small fw-bold text-dark">Sarah Jenkins</span>
                                 </div>
                                 <span class="extra-small text-muted">Oct 12, 2025</span>
@@ -424,18 +510,24 @@
                     </div>
                 </div>
                 <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.1s;">
-                    <div class="card border border-secondary border-opacity-10 shadow-sm h-100 rounded-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Office" class="card-img-top object-fit-cover" style="height: 240px;">
+                    <div
+                        class="card border border-secondary border-opacity-10 shadow-sm h-100 rounded-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Office" class="card-img-top object-fit-cover" style="height: 240px;">
                         <div class="card-body p-4 d-flex flex-column">
                             <span class="badge bg-primary bg-opacity-10 text-primary mb-3 w-fit">Strategy</span>
-                            <h5 class="card-title fw-bold mb-3"><a href="blog-details.html" class="text-dark text-decoration-none">How to Integrate ESG Metrics Into Board-Level Decisions</a></h5>
-                            <p class="card-text text-muted small mb-0">Stop treating ESG as a siloed reporting exercise. Learn how to embed sustainability directly into your core business strategy.</p>
+                            <h5 class="card-title fw-bold mb-3"><a href="blog-details.html"
+                                    class="text-dark text-decoration-none">How to Integrate ESG Metrics Into Board-Level
+                                    Decisions</a></h5>
+                            <p class="card-text text-muted small mb-0">Stop treating ESG as a siloed reporting exercise.
+                                Learn how to embed sustainability directly into your core business strategy.</p>
                         </div>
                         <div class="card-footer bg-theme-white border-0 p-4 pt-0 mt-auto">
                             <hr class="opacity-10 mb-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Sarah Jenkins" class="rounded-circle" width="32" height="32">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80"
+                                        alt="Sarah Jenkins" class="rounded-circle" width="32" height="32">
                                     <span class="small fw-bold text-dark">Sarah Jenkins</span>
                                 </div>
                                 <span class="extra-small text-muted">Sep 28, 2025</span>
@@ -444,18 +536,24 @@
                     </div>
                 </div>
                 <div class="col-md-4 reveal-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="card border border-secondary border-opacity-10 shadow-sm h-100 rounded-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nature" class="card-img-top object-fit-cover" style="height: 240px;">
+                    <div
+                        class="card border border-secondary border-opacity-10 shadow-sm h-100 rounded-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Nature" class="card-img-top object-fit-cover" style="height: 240px;">
                         <div class="card-body p-4 d-flex flex-column">
                             <span class="badge bg-primary bg-opacity-10 text-primary mb-3 w-fit">Environment</span>
-                            <h5 class="card-title fw-bold mb-3"><a href="blog-details.html" class="text-dark text-decoration-none">Demystifying Scope 3 Carbon Emissions Tracking</a></h5>
-                            <p class="card-text text-muted small mb-0">Scope 3 emissions often account for 70% of a company's footprint. Here is how to track them accurately.</p>
+                            <h5 class="card-title fw-bold mb-3"><a href="blog-details.html"
+                                    class="text-dark text-decoration-none">Demystifying Scope 3 Carbon Emissions
+                                    Tracking</a></h5>
+                            <p class="card-text text-muted small mb-0">Scope 3 emissions often account for 70% of a
+                                company's footprint. Here is how to track them accurately.</p>
                         </div>
                         <div class="card-footer bg-theme-white border-0 p-4 pt-0 mt-auto">
                             <hr class="opacity-10 mb-4">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center gap-2">
-                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80" alt="Sarah Jenkins" class="rounded-circle" width="32" height="32">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&q=80"
+                                        alt="Sarah Jenkins" class="rounded-circle" width="32" height="32">
                                     <span class="small fw-bold text-dark">Sarah Jenkins</span>
                                 </div>
                                 <span class="extra-small text-muted">Sep 15, 2025</span>
@@ -472,8 +570,10 @@
         <div class="bg-image"></div>
         <div class="container text-center">
             <h2 class="display-5 fw-bold mb-4">Ready to Elevate Your ESG Strategy?</h2>
-            <p class="lead text-white mb-5 opacity-75 mx-auto" style="max-width: 600px;">Schedule a free consultation to discuss your reporting requirements and discover how we can help you achieve compliance.</p>
-            <a href="booking.html" class="btn btn-light btn-lg text-primary fw-bold px-5 py-3 rounded-pill shadow">Book Your Consultation</a>
+            <p class="lead text-white mb-5 opacity-75 mx-auto" style="max-width: 600px;">Schedule a free consultation to
+                discuss your reporting requirements and discover how we can help you achieve compliance.</p>
+            <a href="booking.html" class="btn btn-light btn-lg text-primary fw-bold px-5 py-3 rounded-pill shadow">Book
+                Your Consultation</a>
         </div>
     </section>
 
@@ -484,18 +584,26 @@
                 <div class="col-lg-4">
                     <a class="navbar-brand text-teal mb-4 d-inline-flex align-items-center gap-2" href="index.html">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                         <span class="fs-4 fw-bold">EcoReport</span>
                     </a>
-                    <p class="text-muted mt-3 mb-4">Independent ESG consultant and sustainability reporting specialist dedicated to corporate transparency and climate action.</p>
+                    <p class="text-muted mt-3 mb-4">Independent ESG consultant and sustainability reporting specialist
+                        dedicated to corporate transparency and climate action.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-envelope"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-2">
@@ -518,7 +626,8 @@
                     <h5>Newsletter</h5>
                     <p class="text-muted small">Stay updated on latest ESG regulations and reporting standards.</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control bg-dark border-secondary text-white placeholder-white" placeholder="Email address">
+                        <input type="text" class="form-control bg-dark border-secondary text-white placeholder-white"
+                            placeholder="Email address">
                         <button class="btn btn-primary" type="button">Join</button>
                     </div>
                     <div class="mt-4 d-flex gap-2 align-items-center grayscale opacity-75">
@@ -546,4 +655,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
+
+</html>
+
+
+
+

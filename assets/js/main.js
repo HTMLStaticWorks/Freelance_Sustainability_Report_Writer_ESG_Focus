@@ -1,13 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sticky Navbar
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('sticky-top');
-        } else {
-            navbar.classList.remove('sticky-top');
-        }
-    });
+    // Navbar setup is now handled via CSS and HTML classes (sticky-top bg-theme-navbar)
 
     // Theme Toggle
     const themeToggle = document.getElementById('themeToggle');
@@ -29,25 +21,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
+
     function updateThemeIcon(theme) {
-        if (!themeToggle) return;
-        const icon = themeToggle.querySelector('i');
-        if (theme === 'dark') {
-            icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
-        } else {
-            icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
-        }
+        const themeToggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')];
+        themeToggles.forEach(btn => {
+            if (!btn) return;
+            const icon = btn.querySelector('i');
+            if (theme === 'dark') {
+                icon.className = 'bi bi-sun';
+            } else {
+                icon.className = 'bi bi-moon-stars';
+            }
+        });
     }
 
     // RTL Toggle
     const rtlToggle = document.getElementById('rtlToggle');
+    const rtlToggleMobile = document.getElementById('rtlToggleMobile');
+    
+    const handleRtlToggle = () => {
+        const currentDir = htmlElement.getAttribute('dir');
+        const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+        htmlElement.setAttribute('dir', newDir);
+        localStorage.setItem('dir', newDir);
+    };
+
     if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
-            const currentDir = htmlElement.getAttribute('dir');
-            const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-            htmlElement.setAttribute('dir', newDir);
-            localStorage.setItem('dir', newDir);
-        });
+        rtlToggle.addEventListener('click', handleRtlToggle);
+    }
+    if (rtlToggleMobile) {
+        rtlToggleMobile.addEventListener('click', handleRtlToggle);
     }
 
     // Restore DIR
@@ -110,4 +124,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+    // Password Visibility Toggle
+    const passwordToggles = document.querySelectorAll('.password-toggle');
+    passwordToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const input = this.parentElement.querySelector('input');
+            const icon = this.querySelector('i');
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('bi-eye', 'bi-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('bi-eye-slash', 'bi-eye');
+            }
+        });
+    });
 });

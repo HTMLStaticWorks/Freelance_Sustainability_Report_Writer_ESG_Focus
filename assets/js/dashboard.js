@@ -1,16 +1,67 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const sidebarToggle = document.getElementById('sidebarToggle');
+    const closeSidebar = document.getElementById('closeSidebar');
     const sidebar = document.getElementById('sidebar');
-    const mainContent = document.getElementById('mainContent');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link[data-section]');
+    const contentSections = document.querySelectorAll('.content-section');
+    const sectionTitle = document.getElementById('currentSectionTitle');
+    const goToOverviewBtn = document.querySelector('.go-to-overview');
 
+    // Sidebar Toggle Logic
     if (sidebarToggle && sidebar) {
         sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-            if (mainContent) mainContent.classList.toggle('active');
+            sidebar.classList.add('show');
         });
     }
 
-    // Dummy Chart Logic (using Chart.js if available, or just mock visuals)
+    if (closeSidebar && sidebar) {
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('show');
+        });
+    }
+
+    // Section Switching Logic
+    function switchSection(sectionId) {
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        const targetSection = document.getElementById(`${sectionId}-section`) || document.getElementById('generic-section');
+        targetSection.classList.add('active');
+
+        // Update UI
+        sidebarLinks.forEach(link => {
+            if (link.getAttribute('data-section') === sectionId) {
+                link.classList.add('active');
+                if (sectionTitle) {
+                    sectionTitle.textContent = link.textContent.trim() + ' Dashboard';
+                }
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Close sidebar on mobile after click
+        if (window.innerWidth < 992) {
+            sidebar.classList.remove('show');
+        }
+    }
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const sectionId = link.getAttribute('data-section');
+            switchSection(sectionId);
+        });
+    });
+
+    if (goToOverviewBtn) {
+        goToOverviewBtn.addEventListener('click', () => {
+            switchSection('overview');
+        });
+    }
+
+    // Dummy Chart Logic
     const ctx = document.getElementById('esgScoreChart');
     if (ctx && typeof Chart !== 'undefined') {
         new Chart(ctx, {
@@ -57,6 +108,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 plugins: {
                     legend: { display: false }
                 }
+            }
+        });
+    }
+
+    const sentimentCtx = document.getElementById('sentimentChart');
+    if (sentimentCtx && typeof Chart !== 'undefined') {
+        new Chart(sentimentCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Positive', 'Neutral', 'Negative'],
+                datasets: [{
+                    data: [65, 25, 10],
+                    backgroundColor: ['#0F766E', '#14B8A6', '#D4A017'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            padding: 20,
+                            font: { size: 11 }
+                        }
+                    }
+                },
+                cutout: '70%'
             }
         });
     }

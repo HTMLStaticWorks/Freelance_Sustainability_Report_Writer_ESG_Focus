@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,37 @@
     <!-- CSS & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-xl fixed-top">
+    <nav class="navbar navbar-expand-xl sticky-top bg-theme-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
                 <span>EcoReport</span>
             </a>
-            
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
                 <span class="bi bi-list fs-1 text-primary"></span>
             </button>
 
@@ -43,14 +52,15 @@
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <button id="themeToggle" class="btn btn-link text-decoration-none p-0 text-secondary">
-                        <i class="bi bi-moon-fill fs-5"></i>
+                    <button id="themeToggle" class="btn icon-btn text-secondary">
+                        <i class="bi bi-moon-fill"></i>
                     </button>
-                    <button id="rtlToggle" class="btn btn-outline-primary btn-sm px-2 py-0">RTL</button>
-                    <a href="login.html" class="btn btn-outline-primary fw-semibold ms-lg-2">Login</a>
-                    <a href="booking.html" class="btn btn-primary">Book Consultation</a>
+                    <button id="rtlToggle" class="btn icon-btn text-secondary"><i class="bi bi-arrow-left-right"></i></button>
+                    <a href="register.html" class="btn btn-outline-primary fw-semibold">Sign Up</a>
+                    <a href="booking.html" class="btn btn-primary d-none d-sm-inline-flex">Book Now</a>
                 </div>
             </div>
         </div>
@@ -71,33 +81,62 @@
                 <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 <hr>
-                <li class="nav-item"><a href="booking.html" class="btn btn-primary w-100">Book Consultation</a></li>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <span class="fw-bold">Theme</span>
+                        <button id="themeToggleMobile" class="btn icon-btn text-secondary"><i class="bi bi-moon-fill"></i></button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <span class="fw-bold">Layout</span>
+                        <button id="rtlToggleMobile" class="btn icon-btn text-secondary"><i class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <a href="register.html" class="btn btn-outline-primary w-100">Sign Up</a>
+                    <a href="booking.html" class="btn btn-primary w-100">Book Now</a>
+                </div>
             </ul>
         </div>
     </div>
 
-    <main style="padding-top: 100px;">
-        <!-- Featured Post Hero -->
+    <main>
+        <section class="page-header-bg d-flex align-items-center text-center" style="min-height: 400px;">
+            <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="container reveal-on-scroll position-relative z-2">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold mb-3 text-white">Sustainability Insights</h1>
+                        <p class="lead text-white opacity-75 mb-0">Latest trends, regulatory updates, and expert analysis in the ESG reporting space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Analysis -->
         <section class="container mt-5 mb-5 reveal-on-scroll">
             <div class="glass-card overflow-hidden border-0 shadow-lg position-relative">
                 <div class="row g-0 align-items-center">
                     <div class="col-lg-7">
-                        <img src="assets/images/esg-tech-featured.png" alt="Featured Post" class="img-fluid h-100 object-fit-cover" style="min-height: 400px;">
+                        <img src="assets/images/esg-tech-featured.png" alt="Featured Post"
+                            class="img-fluid h-100 object-fit-cover" style="min-height: 400px;">
                     </div>
                     <div class="col-lg-5">
                         <div class="p-5">
                             <span class="badge bg-primary mb-3">Featured Analysis</span>
-                            <h2 class="display-6 fw-bold mb-4">The Future of ESG Data: AI, Satellites, and Real-Time Accountability</h2>
-                            <p class="text-muted mb-4">How emerging technologies are transforming sustainability disclosures from annual exercises into continuous monitoring systems.</p>
+                            <h2 class="display-6 fw-bold mb-4">The Future of ESG Data: AI, Satellites, and Real-Time
+                                Accountability</h2>
+                            <p class="text-muted mb-4">How emerging technologies are transforming sustainability
+                                disclosures from annual exercises into continuous monitoring systems.</p>
                             <div class="d-flex align-items-center gap-3 mb-4">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=48&q=80" class="rounded-circle shadow-sm" alt="Sarah Jenkins" width="48" height="48">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=48&q=80"
+                                    class="rounded-circle shadow-sm" alt="Sarah Jenkins" width="48" height="48">
                                 <div>
                                     <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
                                     <span class="small text-muted">Lead ESG Consultant</span>
                                 </div>
                             </div>
-                            <a href="blog-details.html" class="btn btn-primary px-4 py-2">Read Article <i class="bi bi-arrow-right ms-2"></i></a>
+                            <a href="blog-details.html" class="btn btn-primary px-4 py-2">Read Article <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -105,11 +144,6 @@
         </section>
 
         <section class="container pb-5">
-            <div class="row align-items-end mb-5 reveal-on-scroll">
-                <div class="col-lg-7">
-                    <h1 class="display-4">Sustainability Insights</h1>
-                    <p class="lead text-muted">Latest trends, regulatory updates, and expert analysis in the ESG reporting space.</p>
-                </div>
                 <div class="col-lg-5 text-lg-end">
                     <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
                         <button class="btn btn-soft-primary active px-4">All</button>
@@ -124,16 +158,23 @@
                 <!-- Blog Post 1 -->
                 <div class="col-md-6 col-lg-4 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" alt="CSRD Regulation" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80"
+                            alt="CSRD Regulation" class="blog-card-img">
                         <div class="p-4 d-flex flex-column flex-grow-1">
                             <div class="d-flex gap-2 mb-3">
                                 <span class="badge bg-soft-primary text-primary">Regulation</span>
                                 <span class="small text-muted">5 min read</span>
                             </div>
-                            <h4 class="h5"><a href="blog-details.html" class="text-decoration-none text-secondary">The CSRD Countdown: What Non-EU Companies Need to Know</a></h4>
-                            <p class="small text-muted mb-4">Navigating the complex requirements of the Corporate Sustainability Reporting Directive for international firms...</p>
+                            <h4 class="h5"><a href="blog-details.html" class="text-decoration-none text-secondary">The
+                                    CSRD Countdown: What Non-EU Companies Need to Know</a></h4>
+                            <p class="small text-muted mb-3">Navigating the complex requirements of the Corporate
+                                Sustainability Reporting Directive for international firms...</p>
+                            <a href="blog-details.html"
+                                class="text-primary fw-bold text-decoration-none small mb-4 d-inline-flex align-items-center gap-1">Read
+                                More <i class="bi bi-arrow-right"></i></a>
                             <div class="d-flex align-items-center gap-2 mt-auto">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=32&q=80" class="rounded-circle" alt="Sarah Jenkins">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=32&q=80"
+                                    class="rounded-circle" alt="Sarah Jenkins">
                                 <span class="small fw-bold">Sarah Jenkins</span>
                                 <span class="ms-auto small text-muted">May 12, 2026</span>
                             </div>
@@ -144,16 +185,24 @@
                 <!-- Blog Post 2 -->
                 <div class="col-md-6 col-lg-4 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80" alt="Carbon Accounting" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80"
+                            alt="Carbon Accounting" class="blog-card-img">
                         <div class="p-4 d-flex flex-column flex-grow-1">
                             <div class="d-flex gap-2 mb-3">
                                 <span class="badge bg-soft-primary text-primary">Net-Zero</span>
                                 <span class="small text-muted">8 min read</span>
                             </div>
-                            <h4 class="h5"><a href="blog-details.html" class="text-decoration-none text-secondary">Demystifying Scope 3: Strategies for Supply Chain Transparency</a></h4>
-                            <p class="small text-muted mb-4">How to collect reliable data from suppliers and integrate it into your annual carbon emissions disclosure...</p>
+                            <h4 class="h5"><a href="blog-details.html"
+                                    class="text-decoration-none text-secondary">Demystifying Scope 3: Strategies for
+                                    Supply Chain Transparency</a></h4>
+                            <p class="small text-muted mb-3">How to collect reliable data from suppliers and integrate
+                                it into your annual carbon emissions disclosure...</p>
+                            <a href="blog-details.html"
+                                class="text-primary fw-bold text-decoration-none small mb-4 d-inline-flex align-items-center gap-1">Read
+                                More <i class="bi bi-arrow-right"></i></a>
                             <div class="d-flex align-items-center gap-2 mt-auto">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=32&q=80" class="rounded-circle" alt="Sarah Jenkins">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=32&q=80"
+                                    class="rounded-circle" alt="Sarah Jenkins">
                                 <span class="small fw-bold">Sarah Jenkins</span>
                                 <span class="ms-auto small text-muted">May 10, 2026</span>
                             </div>
@@ -164,16 +213,23 @@
                 <!-- Blog Post 3 -->
                 <div class="col-md-6 col-lg-4 reveal-on-scroll">
                     <div class="glass-card h-100 overflow-hidden d-flex flex-column">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="ESG Ratings" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                            alt="ESG Ratings" class="blog-card-img">
                         <div class="p-4 d-flex flex-column flex-grow-1">
                             <div class="d-flex gap-2 mb-3">
                                 <span class="badge bg-soft-primary text-primary">Investor Relations</span>
                                 <span class="small text-muted">4 min read</span>
                             </div>
-                            <h4 class="h5"><a href="blog-details.html" class="text-decoration-none text-secondary">ESG Ratings: How to Improve Your Score with Accurate Data</a></h4>
-                            <p class="small text-muted mb-4">A guide for investor relations teams on managing ESG data requests and improving scores with MSCI and Sustainalytics...</p>
+                            <h4 class="h5"><a href="blog-details.html" class="text-decoration-none text-secondary">ESG
+                                    Ratings: How to Improve Your Score with Accurate Data</a></h4>
+                            <p class="small text-muted mb-3">A guide for investor relations teams on managing ESG data
+                                requests and improving scores with MSCI and Sustainalytics...</p>
+                            <a href="blog-details.html"
+                                class="text-primary fw-bold text-decoration-none small mb-4 d-inline-flex align-items-center gap-1">Read
+                                More <i class="bi bi-arrow-right"></i></a>
                             <div class="d-flex align-items-center gap-2 mt-auto">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=32&q=80" class="rounded-circle" alt="Sarah Jenkins">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=32&q=80"
+                                    class="rounded-circle" alt="Sarah Jenkins">
                                 <span class="small fw-bold">Sarah Jenkins</span>
                                 <span class="ms-auto small text-muted">May 05, 2026</span>
                             </div>
@@ -202,7 +258,8 @@
                         <h2 class="display-6 mb-0">ESG Resource Library</h2>
                     </div>
                     <div class="col-lg-5 text-lg-end mt-4 mt-lg-0">
-                        <p class="text-muted mb-0">Free downloadable handbooks and strategic guides for sustainability professionals.</p>
+                        <p class="text-muted mb-0">Free downloadable handbooks and strategic guides for sustainability
+                            professionals.</p>
                     </div>
                 </div>
                 <div class="row g-4">
@@ -212,7 +269,8 @@
                                 <i class="bi bi-file-earmark-pdf fs-3"></i>
                             </div>
                             <h5 class="fw-bold">2026 CSRD Handbook</h5>
-                            <p class="small text-muted mb-4">A complete 45-page guide to navigating the new EU reporting requirements for global firms.</p>
+                            <p class="small text-muted mb-4">A complete 45-page guide to navigating the new EU reporting
+                                requirements for global firms.</p>
                             <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4">Download PDF</a>
                         </div>
                     </div>
@@ -222,7 +280,8 @@
                                 <i class="bi bi-calculator fs-3"></i>
                             </div>
                             <h5 class="fw-bold">Scope 3 Excel Template</h5>
-                            <p class="small text-muted mb-4">Streamline your supply chain data collection with our verified GHG Protocol calculator.</p>
+                            <p class="small text-muted mb-4">Streamline your supply chain data collection with our
+                                verified GHG Protocol calculator.</p>
                             <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4">Download XLSX</a>
                         </div>
                     </div>
@@ -232,7 +291,8 @@
                                 <i class="bi bi-journal-text fs-3"></i>
                             </div>
                             <h5 class="fw-bold">ESG Maturity Roadmap</h5>
-                            <p class="small text-muted mb-4">A strategic framework for moving from baseline compliance to industry-leading disclosures.</p>
+                            <p class="small text-muted mb-4">A strategic framework for moving from baseline compliance
+                                to industry-leading disclosures.</p>
                             <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4">Download Guide</a>
                         </div>
                     </div>
@@ -285,21 +345,31 @@
             <div class="container">
                 <div class="bg-theme-secondary rounded-4 p-5 text-white position-relative overflow-hidden shadow-lg">
                     <!-- Subtle Gradient Overlay -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at top right, var(--bs-primary), transparent 70%);"></div>
-                    
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25"
+                        style="background: radial-gradient(circle at top right, var(--bs-primary), transparent 70%);">
+                    </div>
+
                     <div class="row align-items-center position-relative z-1">
                         <div class="col-lg-8">
-                            <h2 class="display-5 fw-bold mb-3" style="color: white !important;">Get Expert ESG Insights Delivered Weekly</h2>
-                            <p class="lead opacity-75 mb-4 text-white">Join 5,000+ sustainability leaders who receive our curated regulatory updates and reporting tips every Monday morning.</p>
-                            <form id="blogNewsletter" class="d-flex flex-wrap gap-2">
-                                <input type="email" class="form-control form-control-lg bg-white bg-opacity-10 border-white border-opacity-25 text-white shadow-none placeholder-white" placeholder="Enter your work email" style="min-width: 280px; color: white !important;">
-                                <button class="btn btn-primary btn-lg px-5 hover-lift fw-bold">Subscribe Now</button>
+                            <h2 class="display-5 fw-bold mb-3" style="color: white !important;">Get Expert ESG Insights
+                                Delivered Weekly</h2>
+                            <p class="lead opacity-75 mb-4 text-white">Join 5,000+ sustainability leaders who receive
+                                our curated regulatory updates and reporting tips every Monday morning.</p>
+                            <form id="blogNewsletter" class="d-flex flex-nowrap gap-2" style="max-width: 500px;">
+                                <input type="email"
+                                    class="form-control form-control-lg bg-white bg-opacity-10 border-white border-opacity-25 text-white shadow-none placeholder-white"
+                                    placeholder="Enter your work email"
+                                    style="color: white !important;">
+                                <button class="btn btn-primary btn-lg px-4 hover-lift fw-bold flex-shrink-0">Subscribe Now</button>
                             </form>
                         </div>
                         <div class="col-lg-4 d-none d-lg-block text-center">
                             <div class="position-relative d-inline-block">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" class="rounded-circle shadow-lg border border-white border-opacity-25" alt="Sarah Jenkins" width="220" height="220" style="object-fit: cover;">
-                                <div class="position-absolute bottom-0 end-0 bg-primary rounded-circle p-2 border border-white border-2">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+                                    class="rounded-circle shadow-lg border border-white border-opacity-25"
+                                    alt="Sarah Jenkins" width="220" height="220" style="object-fit: cover;">
+                                <div
+                                    class="position-absolute bottom-0 end-0 bg-primary rounded-circle p-2 border border-white border-2">
                                     <i class="bi bi-patch-check-fill text-white"></i>
                                 </div>
                             </div>
@@ -316,18 +386,26 @@
                 <div class="col-lg-4">
                     <a class="navbar-brand text-teal mb-4 d-inline-flex align-items-center gap-2" href="index.html">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                         <span class="fs-4 fw-bold">EcoReport</span>
                     </a>
-                    <p class="text-muted mt-3 mb-4">Independent ESG consultant and sustainability reporting specialist dedicated to corporate transparency and climate action.</p>
+                    <p class="text-muted mt-3 mb-4">Independent ESG consultant and sustainability reporting specialist
+                        dedicated to corporate transparency and climate action.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-envelope"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-2">
@@ -350,7 +428,8 @@
                     <h5>Newsletter</h5>
                     <p class="text-muted small">Stay updated on latest ESG regulations and reporting standards.</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <input type="text" class="form-control bg-dark border-secondary text-white"
+                            placeholder="Email address">
                         <button class="btn btn-primary" type="button">Join</button>
                     </div>
                     <div class="mt-4 d-flex gap-2 align-items-center grayscale opacity-75">
@@ -377,4 +456,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
+
+
+
+

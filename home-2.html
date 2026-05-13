@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enterprise Solutions | EcoReport ESG</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
     <!-- CSS & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
 </head>
+
 <body>
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-xl fixed-top">
+    <nav class="navbar navbar-expand-xl sticky-top bg-theme-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 8V24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 16L24 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 16L8 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 8V24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 16L24 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M16 16L8 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
                 <span>EcoReport</span>
             </a>
-            
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#mobileMenu">
                 <span class="bi bi-list fs-1 text-primary"></span>
             </button>
 
@@ -42,14 +52,15 @@
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-3">
-                    <button id="themeToggle" class="btn btn-link text-decoration-none p-0 text-secondary">
-                        <i class="bi bi-moon-fill fs-5"></i>
-                    </button>
-                    <button id="rtlToggle" class="btn btn-outline-primary btn-sm px-2 py-0">RTL</button>
-                    <a href="login.html" class="btn btn-outline-primary fw-semibold ms-lg-2">Login</a>
-                    <a href="booking.html" class="btn btn-primary">Book Consultation</a>
+                    <button id="themeToggle" class="btn icon-btn text-secondary"><i
+                            class="bi bi-moon-fill"></i></button>
+                    <button id="rtlToggle" class="btn icon-btn text-secondary"><i
+                            class="bi bi-arrow-left-right"></i></button>
+                    <a href="register.html" class="btn btn-outline-primary fw-semibold">Sign Up</a>
+                    <a href="booking.html" class="btn btn-primary">Book Now</a>
                 </div>
             </div>
         </div>
@@ -70,26 +81,43 @@
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
                 <hr>
-                <li class="nav-item"><a href="booking.html" class="btn btn-primary w-100">Book Consultation</a></li>
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <span class="fw-bold">Theme</span>
+                        <button id="themeToggleMobile" class="btn icon-btn text-secondary"><i
+                                class="bi bi-moon-fill"></i></button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between px-3">
+                        <span class="fw-bold">Layout</span>
+                        <button id="rtlToggleMobile" class="btn icon-btn text-secondary"><i
+                                class="bi bi-arrow-left-right"></i></button>
+                    </div>
+                    <a href="register.html" class="btn btn-outline-primary w-100">Sign Up</a>
+                    <a href="booking.html" class="btn btn-primary w-100">Book Now</a>
+                </div>
             </ul>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <header class="hero-section bg-theme-white">
+    <header class="hero-section bg-theme-light"
+        style="background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%); border-bottom: 1px solid var(--border-color);">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 reveal-on-scroll">
                     <div class="d-flex align-items-center gap-2 mb-4">
                         <span class="badge bg-primary px-3 py-2 rounded-pill">New v2.4 Platform</span>
-                        <span class="text-muted small fw-medium">AI-Powered ESG Intelligence</span>
+                        <span class="text-dark small fw-bold">AI-Powered ESG Intelligence</span>
                     </div>
-                    <h1 class="display-3 fw-bold mb-4">Driving <span class="text-gradient">Sustainable Growth</span> Through Data</h1>
-                    <p class="lead text-muted mb-5">EcoReport's advanced enterprise platform automates complex ESG reporting, providing real-time insights that transform compliance into a competitive advantage.</p>
-                    <div class="d-flex flex-wrap gap-3">
+                    <h1 class="display-3 fw-bold mb-4">Driving <span class="text-gradient">Sustainable Growth</span>
+                        Through Data</h1>
+                    <p class="lead text-dark mb-5">EcoReport's advanced enterprise platform automates complex ESG
+                        reporting, providing real-time insights that transform compliance into a competitive advantage.
+                    </p>
+                    <div class="d-flex flex-wrap align-items-center gap-3">
                         <a href="booking.html" class="btn btn-primary btn-lg px-5 shadow-sm">Get Started</a>
-                        <a href="#solutions" class="btn btn-outline-secondary btn-lg px-4">Explore Solutions</a>
                     </div>
                     <div class="mt-5 pt-4 border-top border-secondary border-opacity-10">
                         <div class="row g-4">
@@ -110,9 +138,11 @@
                 </div>
                 <div class="col-lg-6 reveal-on-scroll">
                     <div class="position-relative">
-                        <img src="assets/images/esg-hero-2.png" alt="Advanced ESG Dashboard" class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-10">
+                        <img src="assets/images/esg-hero-2.png" alt="Advanced ESG Dashboard"
+                            class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-10">
                         <!-- Floating Card -->
-                        <div class="position-absolute bottom-0 start-0 translate-middle-x ms-5 mb-4 glass-card p-3 d-none d-md-block" style="width: 220px;">
+                        <div class="position-absolute bottom-0 start-0 translate-middle-x ms-5 mb-4 glass-card p-3 d-none d-md-block"
+                            style="width: 220px;">
                             <div class="d-flex align-items-center gap-3">
                                 <div class="bg-success bg-opacity-10 p-2 rounded text-success">
                                     <i class="bi bi-graph-up-arrow fs-4"></i>
@@ -136,13 +166,16 @@
                 <div class="col-lg-4 reveal-on-scroll">
                     <p class="text-primary fw-bold text-uppercase small mb-3">Global Coverage</p>
                     <h2 class="display-5 fw-bold mb-4">Multi-Framework Integration</h2>
-                    <p class="text-muted mb-5">Our platform seamlessly synchronizes your ESG data across the world's most rigorous disclosure standards, ensuring compliance without the complexity.</p>
+                    <p class="text-muted mb-5">Our platform seamlessly synchronizes your ESG data across the world's
+                        most rigorous disclosure standards, ensuring compliance without the complexity.</p>
                     <div class="d-flex flex-column gap-3">
-                        <div class="d-flex align-items-center gap-3 p-3 bg-theme-white rounded-3 shadow-sm border border-secondary border-opacity-10">
+                        <div
+                            class="d-flex align-items-center gap-3 p-3 bg-theme-white rounded-3 shadow-sm border border-secondary border-opacity-10">
                             <i class="bi bi-shield-check text-primary fs-4"></i>
                             <span class="fw-medium small text-dark">Audit-Ready Data Extraction</span>
                         </div>
-                        <div class="d-flex align-items-center gap-3 p-3 bg-theme-white rounded-3 shadow-sm border border-secondary border-opacity-10">
+                        <div
+                            class="d-flex align-items-center gap-3 p-3 bg-theme-white rounded-3 shadow-sm border border-secondary border-opacity-10">
                             <i class="bi bi-arrow-repeat text-primary fs-4"></i>
                             <span class="fw-medium small text-dark">Real-time Framework Mapping</span>
                         </div>
@@ -151,8 +184,10 @@
                 <div class="col-lg-8 reveal-on-scroll">
                     <div class="row g-4">
                         <div class="col-6">
-                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
-                                <img src="assets/images/gri-framework.png" alt="GRI" class="w-100 object-fit-cover" style="height:250px;">
+                            <div
+                                class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="assets/images/gri-framework.png" alt="GRI" class="w-100 object-fit-cover"
+                                    style="height:250px;">
                                 <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
                                     <h5 class="fw-bold text-primary mb-1">GRI</h5>
                                     <p class="extra-small text-muted mb-0">Universal Impact Standards</p>
@@ -160,8 +195,10 @@
                             </div>
                         </div>
                         <div class="col-6 mt-md-5">
-                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
-                                <img src="assets/images/sasb-standards.png" alt="SASB" class="w-100 object-fit-cover" style="height:250px;">
+                            <div
+                                class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="assets/images/sasb-standards.png" alt="SASB" class="w-100 object-fit-cover"
+                                    style="height:250px;">
                                 <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
                                     <h5 class="fw-bold text-primary mb-1">SASB</h5>
                                     <p class="extra-small text-muted mb-0">Financial Materiality</p>
@@ -169,8 +206,10 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
-                                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="TCFD" class="w-100 object-fit-cover" style="height:250px;">
+                            <div
+                                class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80"
+                                    alt="TCFD" class="w-100 object-fit-cover" style="height:250px;">
                                 <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
                                     <h5 class="fw-bold text-primary mb-1">TCFD</h5>
                                     <p class="extra-small text-muted mb-0">Climate Risk Analytics</p>
@@ -178,8 +217,10 @@
                             </div>
                         </div>
                         <div class="col-6 mt-md-5">
-                            <div class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
-                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="CSRD" class="w-100 object-fit-cover" style="height:250px;">
+                            <div
+                                class="glass-card h-100 overflow-hidden d-flex flex-column border-0 shadow-lg position-relative">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                                    alt="CSRD" class="w-100 object-fit-cover" style="height:250px;">
                                 <div class="p-4 bg-theme-white border-top border-secondary border-opacity-10">
                                     <h5 class="fw-bold text-primary mb-1">CSRD</h5>
                                     <p class="extra-small text-muted mb-0">EU Compliance Ready</p>
@@ -199,29 +240,36 @@
                 <div class="col-lg-5 reveal-on-scroll">
                     <h6 class="text-primary fw-bold text-uppercase mb-3">Enterprise Features</h6>
                     <h2 class="display-5 mb-4">Unmatched Precision in Sustainability Data</h2>
-                    <p class="text-muted mb-5">Our platform doesn't just collect data—it provides actionable intelligence through a suite of specialized tools designed for global scale.</p>
-                    
+                    <p class="text-muted mb-5">Our platform doesn't just collect data—it provides actionable
+                        intelligence through a suite of specialized tools designed for global scale.</p>
+
                     <div class="d-flex gap-4 mb-4">
-                        <div class="bg-soft-primary p-3 rounded-circle text-primary h-100"><i class="bi bi-cpu fs-3"></i></div>
+                        <div class="bg-soft-primary p-3 rounded-circle text-primary h-100"><i
+                                class="bi bi-cpu fs-3"></i></div>
                         <div>
                             <h5 class="fw-bold">Automated Data Pipelines</h5>
-                            <p class="text-muted small">Direct API integrations with ERP, HRM, and IoT systems to eliminate manual data entry errors.</p>
+                            <p class="text-muted small">Direct API integrations with ERP, HRM, and IoT systems to
+                                eliminate manual data entry errors.</p>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex gap-4 mb-4">
-                        <div class="bg-soft-primary p-3 rounded-circle text-primary h-100"><i class="bi bi-shield-lock fs-3"></i></div>
+                        <div class="bg-soft-primary p-3 rounded-circle text-primary h-100"><i
+                                class="bi bi-shield-lock fs-3"></i></div>
                         <div>
                             <h5 class="fw-bold">Audit-Ready Compliance</h5>
-                            <p class="text-muted small">Every data point is tracked with a full audit trail, ensuring 100% verification for third-party assurance.</p>
+                            <p class="text-muted small">Every data point is tracked with a full audit trail, ensuring
+                                100% verification for third-party assurance.</p>
                         </div>
                     </div>
 
                     <div class="d-flex gap-4">
-                        <div class="bg-soft-primary p-3 rounded-circle text-primary h-100"><i class="bi bi-layers fs-3"></i></div>
+                        <div class="bg-soft-primary p-3 rounded-circle text-primary h-100"><i
+                                class="bi bi-layers fs-3"></i></div>
                         <div>
                             <h5 class="fw-bold">Framework Mapping</h5>
-                            <p class="text-muted small">Instantly map your data across GRI, SASB, TCFD, and CSRD without redundant reporting effort.</p>
+                            <p class="text-muted small">Instantly map your data across GRI, SASB, TCFD, and CSRD without
+                                redundant reporting effort.</p>
                         </div>
                     </div>
                 </div>
@@ -231,28 +279,32 @@
                             <div class="glass-card p-5 h-100 bg-theme-light border-0 shadow-sm">
                                 <i class="bi bi-cloud-check text-primary fs-1 mb-4 d-block"></i>
                                 <h4>Carbon Scope 1-3</h4>
-                                <p class="text-muted small">Full supply chain emissions tracking with automated conversion factors and target setting.</p>
+                                <p class="text-muted small">Full supply chain emissions tracking with automated
+                                    conversion factors and target setting.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mt-md-5">
                             <div class="glass-card p-5 h-100 bg-primary text-white border-0 shadow-lg">
                                 <i class="bi bi-people text-white fs-1 mb-4 d-block"></i>
                                 <h4 class="text-white">Social Impact</h4>
-                                <p class="text-white opacity-75 small">Track DEI metrics, labor practices, and community engagement with standardized scorecards.</p>
+                                <p class="text-white opacity-75 small">Track DEI metrics, labor practices, and community
+                                    engagement with standardized scorecards.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="glass-card p-5 h-100 bg-theme-light border-0 shadow-sm">
                                 <i class="bi bi-bank text-primary fs-1 mb-4 d-block"></i>
                                 <h4>Governance Risk</h4>
-                                <p class="text-muted small">Board-level oversight of ethics, anti-corruption, and regulatory compliance risks across jurisdictions.</p>
+                                <p class="text-muted small">Board-level oversight of ethics, anti-corruption, and
+                                    regulatory compliance risks across jurisdictions.</p>
                             </div>
                         </div>
                         <div class="col-md-6 mt-md-5">
                             <div class="glass-card p-5 h-100 bg-theme-light border-0 shadow-sm">
                                 <i class="bi bi-lightning-charge text-primary fs-1 mb-4 d-block"></i>
                                 <h4>Net-Zero Planner</h4>
-                                <p class="text-muted small">Simulation tools to project carbon reduction pathways based on science-based targets (SBTi).</p>
+                                <p class="text-muted small">Simulation tools to project carbon reduction pathways based
+                                    on science-based targets (SBTi).</p>
                             </div>
                         </div>
                     </div>
@@ -268,60 +320,76 @@
                 <div class="col-lg-8 mx-auto">
                     <h6 class="text-primary fw-bold text-uppercase mb-3">Industry Solutions</h6>
                     <h2 class="h1 mb-3">Tailored for Your Vertical</h2>
-                    <p class="text-muted">ESG is not one-size-fits-all. Our experts provide deep domain expertise for the most demanding sectors.</p>
+                    <p class="text-muted">ESG is not one-size-fits-all. Our experts provide deep domain expertise for
+                        the most demanding sectors.</p>
                 </div>
             </div>
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6 reveal-on-scroll">
-                    <img src="assets/images/industry-solutions.png" alt="Industry Solutions" class="img-fluid rounded-4 shadow">
+                    <img src="assets/images/industry-solutions.png" alt="Industry Solutions"
+                        class="img-fluid rounded-4 shadow">
                 </div>
                 <div class="col-lg-6 reveal-on-scroll">
                     <div class="accordion accordion-flush" id="industryAccordion">
-                        <div class="accordion-item bg-transparent mb-3 border border-secondary border-opacity-10 rounded-3">
+                        <div
+                            class="accordion-item bg-transparent mb-3 border border-secondary border-opacity-10 rounded-3">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#finance">
+                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#finance">
                                     Financial Services & PE
                                 </button>
                             </h2>
                             <div id="finance" class="accordion-collapse collapse" data-bs-parent="#industryAccordion">
                                 <div class="accordion-body text-muted small">
-                                    Portfolio-level ESG analysis, SFDR compliance, and TCFD reporting for asset managers and private equity firms looking to mitigate climate risk and capture green opportunities.
+                                    Portfolio-level ESG analysis, SFDR compliance, and TCFD reporting for asset managers
+                                    and private equity firms looking to mitigate climate risk and capture green
+                                    opportunities.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-transparent mb-3 border border-secondary border-opacity-10 rounded-3">
+                        <div
+                            class="accordion-item bg-transparent mb-3 border border-secondary border-opacity-10 rounded-3">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#manufacturing">
+                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#manufacturing">
                                     Manufacturing & Supply Chain
                                 </button>
                             </h2>
-                            <div id="manufacturing" class="accordion-collapse collapse" data-bs-parent="#industryAccordion">
+                            <div id="manufacturing" class="accordion-collapse collapse"
+                                data-bs-parent="#industryAccordion">
                                 <div class="accordion-body text-muted small">
-                                    Scope 3 transparency, life-cycle assessments (LCA), and supplier engagement programs to drive decarbonization across complex global value chains.
+                                    Scope 3 transparency, life-cycle assessments (LCA), and supplier engagement programs
+                                    to drive decarbonization across complex global value chains.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bg-transparent mb-3 border border-secondary border-opacity-10 rounded-3">
+                        <div
+                            class="accordion-item bg-transparent mb-3 border border-secondary border-opacity-10 rounded-3">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#realestate">
+                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#realestate">
                                     Real Estate & Infrastructure
                                 </button>
                             </h2>
-                            <div id="realestate" class="accordion-collapse collapse" data-bs-parent="#industryAccordion">
+                            <div id="realestate" class="accordion-collapse collapse"
+                                data-bs-parent="#industryAccordion">
                                 <div class="accordion-body text-muted small">
-                                    GRESB reporting, energy efficiency optimization, and climate resilience assessments for property portfolios and large-scale infrastructure projects.
+                                    GRESB reporting, energy efficiency optimization, and climate resilience assessments
+                                    for property portfolios and large-scale infrastructure projects.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item bg-transparent border border-secondary border-opacity-10 rounded-3">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#tech">
+                                <button class="accordion-button collapsed rounded-3 fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#tech">
                                     Technology & SaaS
                                 </button>
                             </h2>
                             <div id="tech" class="accordion-collapse collapse" data-bs-parent="#industryAccordion">
                                 <div class="accordion-body text-muted small">
-                                    Data center energy tracking, circular hardware management, and DEI transparency to meet the high expectations of talent and tech-focused investors.
+                                    Data center energy tracking, circular hardware management, and DEI transparency to
+                                    meet the high expectations of talent and tech-focused investors.
                                 </div>
                             </div>
                         </div>
@@ -343,28 +411,32 @@
                     <div class="p-4 text-center border-end border-secondary border-opacity-10 h-100">
                         <div class="h2 fw-bold text-primary opacity-50 mb-4">01</div>
                         <h5 class="fw-bold">Gap Assessment</h5>
-                        <p class="small text-muted">A baseline audit of your current ESG data, policies, and reporting readiness.</p>
+                        <p class="small text-muted">A baseline audit of your current ESG data, policies, and reporting
+                            readiness.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="p-4 text-center border-end border-secondary border-opacity-10 h-100">
                         <div class="h2 fw-bold text-primary opacity-50 mb-4">02</div>
                         <h5 class="fw-bold">Strategy Design</h5>
-                        <p class="small text-muted">Defining material topics and setting science-based targets aligned with business goals.</p>
+                        <p class="small text-muted">Defining material topics and setting science-based targets aligned
+                            with business goals.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="p-4 text-center border-end border-secondary border-opacity-10 h-100">
                         <div class="h2 fw-bold text-primary opacity-50 mb-4">03</div>
                         <h5 class="fw-bold">Data Activation</h5>
-                        <p class="small text-muted">Deploying the EcoReport platform to automate collection and track real-time progress.</p>
+                        <p class="small text-muted">Deploying the EcoReport platform to automate collection and track
+                            real-time progress.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="p-4 text-center h-100">
                         <div class="h2 fw-bold text-primary opacity-50 mb-4">04</div>
                         <h5 class="fw-bold">Market Leadership</h5>
-                        <p class="small text-muted">Publishing investor-grade reports that showcase your sustainability leadership.</p>
+                        <p class="small text-muted">Publishing investor-grade reports that showcase your sustainability
+                            leadership.</p>
                     </div>
                 </div>
             </div>
@@ -376,29 +448,38 @@
         <div class="container-fluid px-md-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 reveal-on-scroll">
-                    <h2 class="display-5 fw-bold mb-4">Proven Impact. <br><span class="text-teal">Measurable Results.</span></h2>
-                    <p class="lead text-white opacity-75 mb-5">We've helped over 120 enterprises transition from "box-ticking" compliance to strategic ESG leadership that drives valuation and reduces risk.</p>
-                    
+                    <h2 class="display-5 fw-bold mb-4">Proven Impact. <br><span class="text-teal">Measurable
+                            Results.</span></h2>
+                    <p class="lead text-white opacity-75 mb-5">We've helped over 120 enterprises transition from
+                        "box-ticking" compliance to strategic ESG leadership that drives valuation and reduces risk.</p>
+
                     <div class="row g-4 mb-5">
                         <div class="col-6">
-                            <div class="p-4 rounded-4 border border-white border-opacity-10" style="background-color: rgba(255,255,255,0.05);">
+                            <div class="p-4 rounded-4 border border-white border-opacity-10"
+                                style="background-color: rgba(255,255,255,0.05);">
                                 <h3 class="fw-bold mb-0 text-white">30%</h3>
                                 <p class="small mb-0 text-white opacity-75">Avg. Carbon Reduction</p>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="p-4 rounded-4 border border-white border-opacity-10" style="background-color: rgba(255,255,255,0.05);">
+                            <div class="p-4 rounded-4 border border-white border-opacity-10"
+                                style="background-color: rgba(255,255,255,0.05);">
                                 <h3 class="fw-bold mb-0 text-white">85%</h3>
                                 <p class="small mb-0 text-white opacity-75">Stakeholder Trust Increase</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="p-5 rounded-4 bg-primary bg-opacity-10 border border-primary border-opacity-20 position-relative">
-                        <i class="bi bi-quote fs-1 text-primary opacity-25 position-absolute top-0 start-0 ms-4 mt-3"></i>
-                        <p class="fs-5 fst-italic mb-4 position-relative z-1">"EcoReport is the first platform that actually speaks the language of the C-Suite and the Sustainability team. It's transformed how we discuss ESG at the board level."</p>
+
+                    <div
+                        class="p-5 rounded-4 bg-primary bg-opacity-10 border border-primary border-opacity-20 position-relative">
+                        <i
+                            class="bi bi-quote fs-1 text-primary opacity-25 position-absolute top-0 start-0 ms-4 mt-3"></i>
+                        <p class="fs-5 fst-italic mb-4 position-relative z-1">"EcoReport is the first platform that
+                            actually speaks the language of the C-Suite and the Sustainability team. It's transformed
+                            how we discuss ESG at the board level."</p>
                         <div class="d-flex align-items-center gap-3">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Marcus" class="rounded-circle" width="50" height="50">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+                                alt="Marcus" class="rounded-circle" width="50" height="50">
                             <div>
                                 <h6 class="mb-0 fw-bold text-white">David Sterling</h6>
                                 <span class="small opacity-75">Chief Sustainability Officer, Nexa Corp</span>
@@ -407,13 +488,16 @@
                     </div>
                 </div>
                 <div class="col-lg-6 reveal-on-scroll">
-                    <div class="glass-card p-5 border-white border-opacity-20" style="background-color: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                    <div class="glass-card p-5 border-white border-opacity-20"
+                        style="background-color: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
                         <h4 class="text-white mb-4">Request Your ESG Maturity Audit</h4>
-                        <p class="small text-white opacity-75 mb-4">Our experts will conduct a high-level review of your current reporting status and provide a strategic roadmap.</p>
+                        <p class="small text-white opacity-75 mb-4">Our experts will conduct a high-level review of your
+                            current reporting status and provide a strategic roadmap.</p>
                         <form>
                             <div class="mb-3">
                                 <label class="form-label small text-white opacity-75">Work Email</label>
-                                <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="name@company.com">
+                                <input type="email" class="form-control bg-dark border-secondary text-white"
+                                    placeholder="name@company.com">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label small text-white opacity-75">Industry</label>
@@ -426,7 +510,8 @@
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary w-100 py-3 mt-2">Book Free Audit</button>
-                            <p class="text-center mt-3 small text-white opacity-50 mb-0">Join 120+ leading enterprises today.</p>
+                            <p class="text-center mt-3 small text-white opacity-50 mb-0">Join 120+ leading enterprises
+                                today.</p>
                         </form>
                     </div>
                 </div>
@@ -439,7 +524,8 @@
         <div class="container py-5">
             <div class="reveal-on-scroll">
                 <h2 class="display-4 fw-bold mb-3">Ready to Lead in the Green Economy?</h2>
-                <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px;">Stop reacting to regulations. Start driving value with the world's most advanced ESG data platform.</p>
+                <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px;">Stop reacting to regulations. Start
+                    driving value with the world's most advanced ESG data platform.</p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="booking.html" class="btn btn-primary btn-lg px-5">Get a Demo</a>
                     <a href="contact.html" class="btn btn-outline-secondary btn-lg px-5">Talk to an Expert</a>
@@ -455,18 +541,26 @@
                 <div class="col-lg-4">
                     <a class="navbar-brand text-teal mb-4 d-inline-flex align-items-center gap-2" href="index.html">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 2L4 8V24L16 30L28 24V8L16 2Z" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16 10V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M16 14L10 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                         <span class="fs-4 fw-bold">EcoReport</span>
                     </a>
-                    <p class="text-muted mt-3 mb-4">Independent ESG consultant and sustainability reporting specialist dedicated to corporate transparency and climate action.</p>
+                    <p class="text-muted mt-3 mb-4">Independent ESG consultant and sustainability reporting specialist
+                        dedicated to corporate transparency and climate action.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i class="bi bi-envelope"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle"><i
+                                class="bi bi-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-2">
@@ -489,7 +583,8 @@
                     <h5>Newsletter</h5>
                     <p class="text-muted small">Stay updated on latest ESG regulations and reporting standards.</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control bg-dark border-secondary text-white" placeholder="Email address">
+                        <input type="text" class="form-control bg-dark border-secondary text-white"
+                            placeholder="Email address">
                         <button class="btn btn-primary" type="button">Join</button>
                     </div>
                     <div class="mt-4 d-flex gap-2 align-items-center grayscale opacity-75">
@@ -516,4 +611,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
+</html>
+
 </html>
